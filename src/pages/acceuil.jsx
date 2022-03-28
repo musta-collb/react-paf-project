@@ -3,6 +3,7 @@ import Card from "../components/cartesAcceuil";
 import Display from "../components/display";
 import NavBar from "../components/navBar";
 import Presentation from "../components/aPropos";
+import Footer from "../components/footer";
 
 const Index = () => {
   const items = [
@@ -32,7 +33,7 @@ const Index = () => {
     },
   ];
   return (
-    <div className="min-h-full">
+    <div className="min-h-full mb-0">
       <NavBar />
       {/**the content */}
       {/* <header className="bg-white shadow">
@@ -67,6 +68,9 @@ const Index = () => {
           <hr className="px-6" />
         </div>
       </main>
+
+      {/* footer */}
+      <Footer />
     </div>
   );
 };

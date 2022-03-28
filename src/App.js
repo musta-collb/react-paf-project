@@ -1,4 +1,4 @@
-import Index from "./pages";
+import Index from "./pages/acceuil.jsx";
 
 function App() {
   return (

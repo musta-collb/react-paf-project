@@ -6,7 +6,7 @@ const GestionAcquisition = () => {
         <div className="flex flex-col w-screen h-screen ">
             {/* header */}
             <Header/>
-            <div className="flex flex-row grow overflow-y-auto">
+            <div className="flex sm:flex-row flex-col grow overflow-y-auto">
                 {/* sidebar */}
                 <SideBar/>
                 {/* content */}

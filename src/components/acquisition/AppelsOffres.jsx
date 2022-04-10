@@ -5,13 +5,16 @@ const AppelsOffres = () => {
     return ( 
         <div className="flex flex-col grow space-y-2">
            {/* en-tête */}
-            <div className="flex  flex-col h-64 flew-none drop shadow-lg p-2 space-y-2">
-                <h1 className="maven_pro">Les appels d'offres</h1>
-                <div className="flex justify-between">
-                    <input type="text" className="outline-none border-2 rounded-lg p-2"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-[40px] w-[40px]" viewBox="0 0 20 20" fill="blue">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
-                    </svg>
+            <div className="flex  flex-col h-64 flew-none drop shadow-lg px-4  pt-1 pb-2">
+                <h1 className=" font-bold text-2xl text-zinc-600">Les appels d'offres</h1>
+                <div className="flex justify-between p-2 items-center">
+                    <input type="text" className="focus:border-zinc-400 border-zinc-200 h-8 outline-none border-[1px] rounded p-2"/>
+                    <button className="flex space-x-2 items-center bg-blue-600 px-4 py-1 rounded-lg">
+                        <span className="font-semibold text-sm">Add</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             {/* Les appels d'offres */}

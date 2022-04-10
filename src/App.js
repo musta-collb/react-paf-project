@@ -1,9 +1,10 @@
 import Index from "./pages/acceuil.jsx";
+import GestionAcquisition from "./pages/GastionAcquisition.jsx";
 
 function App() {
   return (
     <div>
-      <Index />
+      <GestionAcquisition/>
     </div>
   );
 }

@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         lora: "'Lora', serif",
-        sans: ["'Red Hat Mono', monospace"],
+        sans: ["'Arial', monospace"],
+        maven_pro:"maven pro"
       },
       screens: {
         tablet: "1100px",

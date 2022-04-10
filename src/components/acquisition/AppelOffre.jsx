@@ -39,7 +39,7 @@ const AppelOffre = () => {
                 </div> 
                 {/* control */}
                 <div className="flex flex-col justify-end space-5">
-                    <button className="bg-red-500 rounded-lg p-2 drop-shadow-xl">Détails</button>
+                    <button className="bg-red-500 rounded-lg px-4 drop-shadow-xl">Détails</button>
                 </div>
             </div>  
         </div>

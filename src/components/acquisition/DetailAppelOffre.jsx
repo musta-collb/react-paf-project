@@ -46,12 +46,14 @@ const DetailAppelOffre = () => {
                 <span className="text-lg font-bold">Détail des besoins</span>
             </div>
             <table className="w-full">
-                <tr className="border-b-[1px] bg-sky-500"> 
+                <tr className="border-b-[1px] drop-shadow-lg bg-sky-500"> 
                     <th className="font-semibold text-sm text-zinc-600 p-2">Designation bien</th>
                     <th className="font-semibold text-sm text-zinc-600 p-2">Descriptions</th>
                     <th className="font-semibold text-sm text-zinc-600 p-2">Quantité</th>
                     <th className="font-semibold text-sm text-zinc-600 p-2">unité</th>
                 </tr>
+                <tbody className="p-2">
+
                 {biens.map((b)=>
                     <tr key={b} className="border-b-[1px]">
                         <td className="text-sm p-2">ldfjdksfkd</td>
@@ -60,9 +62,10 @@ const DetailAppelOffre = () => {
                         <td className="text-sm p-2">dfsdfdfdsfd</td>
                     </tr>
                 )}   
+                </tbody>
             </table>
-            <div className="flex">
-                <Link to="/appelsoffres" className="bg-red-300">retour</Link>
+            <div className="flex justify-end px-4">
+                <Link to="/appelsoffres" className=" rounded px-2 bg-red-300">retour</Link>
             </div>
         </div>
      );

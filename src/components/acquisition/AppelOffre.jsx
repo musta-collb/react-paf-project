@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AppelOffre = () => {
     return ( 
         <div className="flex flex-col h-fit w-full bg-slate-100 drop-shadow-lg p-3 rounded-lg">
@@ -40,7 +42,9 @@ const AppelOffre = () => {
                 </div> 
                 {/* control */}
                 <div className="flex flex-col justify-end space-5">
-                    <button className="bg-red-500 rounded py-1 px-4 text-sm text-zinc-100 drop-shadow-xl">Détails</button>
+                    <button className="bg-red-500 rounded py-1 px-4 text-sm text-zinc-100 drop-shadow-xl">
+                        <Link to="/details">Détails</Link>
+                    </button>
                 </div>
             </div>  
         </div>

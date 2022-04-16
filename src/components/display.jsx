@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
 const Display = () => {
   return (
@@ -20,12 +21,11 @@ const Display = () => {
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <button
-          type="button"
-          className=" mb-3 hover:text-gray-700 text-black font-lora font-semibold py-2 px-4 rounded sm:px-2 sm:py-1 border-2 border-gray-800"
-        >
-          Voir tous
-        </button>
+        <Link to="/fournisseur/signup">
+          <button className="bg-gray-900 text-semibold text-white px-8 py-2 hover:bg-gray-800 rounded mb-2">
+            Voir tous
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,18 +1,20 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
         lora: "'Lora', serif",
-        sans: ["'Arial', monospace"],
-        maven_pro:"maven pro"
       },
       screens: {
         tablet: "1100px",
         ...defaultTheme.screens,
       },
+      colors: {
+        purple: colors.purple,
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

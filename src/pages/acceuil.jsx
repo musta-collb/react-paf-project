@@ -6,7 +6,8 @@ import Presentation from "../components/aPropos";
 import Footer from "../components/footer";
 
 const Index = () => {
-  const items = [
+  // fonctionalités
+  const fonctionalite = [
     {
       titre: "fonction fornisseur",
       description:
@@ -32,20 +33,29 @@ const Index = () => {
       imageUrl: "../images/img4.jpg",
     },
   ];
+  const myLinks = [
+    {
+      title: "Accueil",
+      destination: "/",
+      active: true,
+    },
+    {
+      title: "se connecter",
+      destination: "/personnel/login",
+      active: false,
+    },
+  ];
   return (
     <div className="min-h-full mb-0">
-      <NavBar />
-      {/**the content */}
-      {/* <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-          </div>
-        </header> */}
+      {/* NavBar */}
+      <NavBar links={myLinks} />
 
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          {/* Une introdution */}
           <Display />
           <hr className="my-8" />
+
           <Presentation />
           <hr className="my-8" />
           <div className="w-full flex justify-center text-6xl">
@@ -54,7 +64,7 @@ const Index = () => {
 
           {/* les fonctions */}
           <div className="w-full flex flex-wrap justify-around my-10">
-            {items.map((item) => {
+            {fonctionalite.map((item) => {
               return (
                 <Card
                   titre={item.titre}

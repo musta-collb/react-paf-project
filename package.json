@@ -14,11 +14,7 @@
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.29.0",
     "react-icons": "^4.3.1",
-<<<<<<< HEAD
-    "react-router-dom": "^6.3.0",
-=======
     "react-router-dom": "^6.2.2",
->>>>>>> 22bf55a0b1726ad8f3332899cc7fd3ef6647acc4
     "react-scripts": "5.0.0",
     "react-table": "^7.7.0",
     "web-vitals": "^2.1.4"

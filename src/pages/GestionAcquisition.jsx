@@ -27,11 +27,9 @@ const GestionAcquisition = () => {
   ];
   return (
     <div className="flex flex-col w-full">
-      {/* header */}
-      <div className="flex sm:flex-row flex-col grow overflow-y-auto">
+      <div className="flex sm:flex-row flex-col grow">
         {/* sidebar */}
         <SideBar links={myLinks} />
-        {/* <SideBarBeta /> */}
         {/* content */}
         <Outlet />
         <div className="w-1/6 bd-zinc-400"></div>

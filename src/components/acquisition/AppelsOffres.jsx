@@ -9,6 +9,78 @@ const AppelsOffres = () => {
       date: "12 déc 2012",
       objet: "La restauration de nouveau appariel électrique",
     },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    }
   ];
   return (
     <div className="flex flex-col grow space-y-2">
@@ -20,7 +92,7 @@ const AppelsOffres = () => {
         <div className="flex flex-col md:flex-row space-y-2 justify-between p-2 items-center float-right">
           <button className="flex space-x-2 items-center bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg">
             <Link
-              to="/creationappelsoffres"
+              to="../creationappelsoffres"
               className="font-semibold text-sm text-white "
             >
               Add
@@ -43,7 +115,7 @@ const AppelsOffres = () => {
         </div>
       </div>
       {/* Les appels d'offres */}
-      <div className=" p-3 overflow-y-auto flex flex-col flex-auto space-y-2 ">
+      <div className="p-3  flex flex-col flex-auto space-y-2 ">
         {appelsOffres.map((ao) => (
           <AppelOffre appelOffre={ao} />
         ))}

@@ -1,5 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
-import AppelsOffres from "../components/acquisition/AppelsOffres";
+import AppelsOffres from "../components/acquisition/appelsoffres/AppelsOffres";
 // import Header from "../components/acquisition/Header";
 import SideBar from "../components/acquisition/SideBar";
 // import SideBarBeta from "../components/acquisition/sideBarBeta";

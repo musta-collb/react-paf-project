@@ -1,5 +1,5 @@
 import { useFieldArray, useForm } from "react-hook-form"
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "../SubmitButton";
 export default function CreationAppelOffre() {
     const{register, handleSubmit, formState, control}=useForm({
         defaultValues:{biens:[{designation:'', descriptionBien:'', quantite:'',unite:''}]},

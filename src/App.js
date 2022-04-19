@@ -8,15 +8,15 @@ import LoginFournisseur from "./pages/connexionFournisseur.jsx";
 import AdminPersonnel from "./pages/admin/adminPersonnel.jsx";
 import EditPersonnel from "./pages/admin/editPersonnel.jsx";
 // Manavana
-import AppelsOffres from "./components/acquisition/AppelsOffres.jsx";
-import CreationAppelOffre from "./components/acquisition/CreationAppelOffre.jsx";
-import DetailAppelOffre from "./components/acquisition/DetailAppelOffre.jsx";
+import AppelsOffres from "./components/acquisition/appelsoffres/AppelsOffres.jsx";
+import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAppelOffre.jsx";
+import DetailAppelOffre from "./components/acquisition/appelsoffres/DetailAppelOffre.jsx";
 import GestionAcquisition from "./pages/GestionAcquisition.jsx";
 import Principale from "./pages/Personnel/principale.jsx";
-import Offers from "./components/acquisition/Offres.jsx";
-import Marche from "./components/acquisition/Marche.jsx";
+import Offers from "./components/acquisition/offres/Offres.jsx";
+import Marche from "./components/acquisition/marches/Marche.jsx";
 import { QueryClientProvider,QueryClient } from "react-query";
-import Fournisseurs from "./components/acquisition/Fournisseur.jsx";
+import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseur.jsx";
 const queryClient=new QueryClient();
 function App() {
   return (

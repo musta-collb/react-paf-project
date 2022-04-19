@@ -15,9 +15,12 @@ import GestionAcquisition from "./pages/GestionAcquisition.jsx";
 import Principale from "./pages/Personnel/principale.jsx";
 import Offers from "./components/acquisition/Offres.jsx";
 import Marche from "./components/acquisition/Marche.jsx";
+import { QueryClientProvider,QueryClient } from "react-query";
 import Fournisseurs from "./components/acquisition/Fournisseur.jsx";
+const queryClient=new QueryClient();
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<Index />}></Route>
 
@@ -62,6 +65,7 @@ function App() {
         </Route>
         {/* Manavana */}
       </Routes>
+    </QueryClientProvider>
   );
 }
 

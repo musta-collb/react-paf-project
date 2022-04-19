@@ -1,87 +1,26 @@
 import AppelOffre from "./AppelOffre";
 import { Link } from "react-router-dom";
+import {useQuery} from "react-query";
+
+const fetchAO=async()=>{
+  const res=await fetch("http://localhost:5500/appelsoffres");
+  if(!res.ok){
+    throw new Error("Erreur!")
+  }
+  return res.json();
+}
 
 const AppelsOffres = () => {
-  const appelsOffres = [
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    },
-    {
-      id: 12,
-      reference: "The last week repport",
-      date: "12 déc 2012",
-      objet: "La restauration de nouveau appariel électrique",
-    }
-  ];
+  
+  const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAO);
+
+  if(isLoading) return (<div>Loading ...</div>);
+
+  if(isError){
+    console.log(error)
+    return (<div>Error!</div>);
+  } 
+  
   return (
     <div className="flex flex-col grow space-y-2">
       {/* en-tête */}
@@ -116,7 +55,7 @@ const AppelsOffres = () => {
       </div>
       {/* Les appels d'offres */}
       <div className="p-3  flex flex-col flex-auto space-y-2 ">
-        {appelsOffres.map((ao) => (
+        {data.map((ao) => (
           <AppelOffre appelOffre={ao} />
         ))}
       </div>

@@ -1,33 +1,17 @@
 import AppelOffre from "./AppelOffre";
 import { Link } from "react-router-dom";
-import {useQuery} from "react-query";
-import Erreur from "../Erreur";
-import Loading from "../Loading";
-
-const fetchAO=async()=>{
-  const res=await fetch("http://localhost:5500/appelsoffres");
-  if(!res.ok){
-    throw new Error("Erreur!")
-  }
-  return res.json();
-}
 
 const AppelsOffres = () => {
-  
-  const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAO);
-
-  if(isLoading) 
+  const appelsOffres = [
+    {
+      id: 12,
+      reference: "The last week repport",
+      date: "12 déc 2012",
+      objet: "La restauration de nouveau appariel électrique",
+    },
+  ];
   return (
-    <Loading/>
-    );
-
-  if(isError){
-    console.log(error)
-    return (<Erreur/>);
-  } 
-  
-  return (
-    <div  className="flex flex-col grow space-y-2">
+    <div className="flex flex-col grow space-y-2">
       {/* en-tête */}
       <div className="flex  flex-col flew-none drop shadow-lg px-4  pt-1 pb-2">
         <h1 className=" font-bold text-2xl text-zinc-600">
@@ -36,7 +20,7 @@ const AppelsOffres = () => {
         <div className="flex flex-col md:flex-row space-y-2 justify-between p-2 items-center float-right">
           <button className="flex space-x-2 items-center bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg">
             <Link
-              to="../creationappelsoffres"
+              to="/creationappelsoffres"
               className="font-semibold text-sm text-white "
             >
               Add
@@ -59,8 +43,8 @@ const AppelsOffres = () => {
         </div>
       </div>
       {/* Les appels d'offres */}
-      <div className="p-3  flex flex-col flex-auto space-y-2 ">
-        {data.map((ao) => (
+      <div className=" p-3 overflow-y-auto flex flex-col flex-auto space-y-2 ">
+        {appelsOffres.map((ao) => (
           <AppelOffre appelOffre={ao} />
         ))}
       </div>

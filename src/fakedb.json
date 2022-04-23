@@ -4,16 +4,39 @@
             "id": 12,
             "reference": "The last week repport",
             "date": "12 déc 2012",
-            "objet": "La restauration de nouveau appariel électrique"
+            "objet": "La restauration de nouveau appariel électrique",
+            "biens":[
+                {
+                    "id":1,
+                    "designation":"PC Portable",
+                    "description":"Ordinateur portable HP",
+                    "quantite":2,
+                    "unite":"piece"
+                },
+                {
+                    "id":1,
+                    "designation":"PC Portable",
+                    "description":"Ordinateur portable HP",
+                    "quantite":2,
+                    "unite":"piece"
+                },
+                {
+                    "id":1,
+                    "designation":"PC Portable",
+                    "description":"Ordinateur portable HP",
+                    "quantite":2,
+                    "unite":"piece"
+                }
+            ]
         },
         {
-            "id": 12,
+            "id": 13,
             "reference": "The last week repport",
             "date": "12 déc 2012",
             "objet": "La restauration de nouveau appariel électrique"
         },
         {
-            "id": 12,
+            "id": 14,
             "reference": "The last week repport",
             "date": "12 déc 2012",
             "objet": "La restauration de nouveau appariel électrique"

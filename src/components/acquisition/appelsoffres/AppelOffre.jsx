@@ -1,14 +1,25 @@
 import { Link, useParams } from "react-router-dom";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import usePortal from 'react-useportal'
+import DeleteModal from "./DeleteModal";
+const handleDelete=()=>{
+
+}
+const handleUpdate=()=>{
+  console.log("fsdlkfjdkfjkldfklsdjfklsdjfklsdf")
+}
 
 const AppelOffre = (props) => {
+  //Route stuff
   const { id } = useParams();
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
-  console.log(id);
   const { appelOffre } = props;
+  //Portalstuff
+  const{Portal, isOpen, openPortal, closePortal }=usePortal();
+
   return (
-    <div className="flex flex-col h-fit w-full bg-slate-100  p-3 rounded-lg">
+    <div  className="flex flex-col h-fit w-full bg-slate-100  p-3 rounded-lg">
       {/* En-tête */}
       <div className="flex justify-between">
         <div className="flex flex-col">
@@ -21,7 +32,7 @@ const AppelOffre = (props) => {
           </span>
         </div>
         <div className="flex justify-between space-x-5 items-center">
-          <div className="">
+          <div  className="">
             <Tippy content="Modifier">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +41,7 @@ const AppelOffre = (props) => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               stroke-width="2"
+              onClick={openPortal}
               >
               <path
                 stroke-linecap="round"
@@ -38,6 +50,12 @@ const AppelOffre = (props) => {
                 />
             </svg>
             </Tippy>
+            {
+              isOpen &&
+              <Portal>
+                <DeleteModal/>
+              </Portal>
+            }
           </div>
           <div className="flex p-2">
             <Tippy content="Suprimer">
@@ -49,6 +67,7 @@ const AppelOffre = (props) => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
+              onClick={handleDelete}
               >
               <path
                 strokeLinecap="round"

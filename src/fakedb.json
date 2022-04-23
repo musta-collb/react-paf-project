@@ -1,45 +1,26 @@
 {
-    "appelsoffres":[
+  "appelsoffres": [
+    {
+      "biens": [
         {
-            "id": 12,
-            "reference": "The last week repport",
-            "date": "12 déc 2012",
-            "objet": "La restauration de nouveau appariel électrique",
-            "biens":[
-                {
-                    "id":1,
-                    "designation":"PC Portable",
-                    "description":"Ordinateur portable HP",
-                    "quantite":2,
-                    "unite":"piece"
-                },
-                {
-                    "id":1,
-                    "designation":"PC Portable",
-                    "description":"Ordinateur portable HP",
-                    "quantite":2,
-                    "unite":"piece"
-                },
-                {
-                    "id":1,
-                    "designation":"PC Portable",
-                    "description":"Ordinateur portable HP",
-                    "quantite":2,
-                    "unite":"piece"
-                }
-            ]
+          "designation": "SDFKDJFKD",
+          "descriptionBien": "SDMKLFJDKLJFLKDF",
+          "quantite": "SLDKFJKLDF",
+          "unite": "SDFKJDSJFKDL"
         },
         {
-            "id": 13,
-            "reference": "The last week repport",
-            "date": "12 déc 2012",
-            "objet": "La restauration de nouveau appariel électrique"
-        },
-        {
-            "id": 14,
-            "reference": "The last week repport",
-            "date": "12 déc 2012",
-            "objet": "La restauration de nouveau appariel électrique"
+          "designation": "SDLFKDFKJSDF",
+          "quantite": "SDLFKJSDKLJFSD",
+          "unite": "SLDKFJKDJFD",
+          "descriptionBien": "SLDKFJKDFKLD"
         }
-    ]
+      ],
+      "reference": "SDKFDKFKLSDFSDLFKJSDKSL",
+      "objet": "SFDFJSLDFDSD",
+      "budget": "SLDFJDJLFD",
+      "description": "SLDKFJKDJFKLD",
+      "dateLimite": "2022-04-17",
+      "id": 16
+    }
+  ]
 }

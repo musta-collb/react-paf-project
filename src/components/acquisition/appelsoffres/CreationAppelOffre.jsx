@@ -10,8 +10,12 @@ export default function CreationAppelOffre() {
         name:'biens'
     });
     const{errors}=formState;
-    const onSubmit=(data)=>{
-        alert("enregistrté");
+    const onSubmit=async (data)=>{
+        await fetch("http://localhost:5500/appelsoffres",{
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(data)
+        })
     }
     return (
         <div className="flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em]">

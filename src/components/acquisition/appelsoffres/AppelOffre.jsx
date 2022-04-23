@@ -3,20 +3,37 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import usePortal from 'react-useportal'
 import DeleteModal from "./DeleteModal";
-const handleDelete=()=>{
-
-}
-const handleUpdate=()=>{
-  console.log("fsdlkfjdkfjkldfklsdjfklsdjfklsdf")
-}
-
+import UpdateModal from "./UpdateModal";
 const AppelOffre = (props) => {
   //Route stuff
   const { id } = useParams();
+  const {idAppel}=useParams();
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
   const { appelOffre } = props;
   //Portalstuff
-  const{Portal, isOpen, openPortal, closePortal }=usePortal();
+  //For deletion
+  const useDeleteModal=()=>{
+    const{Portal, isOpen, openPortal, closePortal }=usePortal();
+    return{
+      DeletionPortal:Portal,
+      isDeleteModalOpen:isOpen,
+      openDeleteModal:openPortal,
+      closeDeleteModal:closePortal
+    }
+  }
+  //For updates
+  const{DeletionPortal, isDeleteModalOpen,openDeleteModal,closeDeleteModal}=useDeleteModal();
+
+  const useUpdateModal=()=>{
+    const{Portal, isOpen, openPortal, closePortal }=usePortal();
+    return{
+      UpdatePortal:Portal,
+      isUpdateModalOpen:isOpen,
+      openUpdateModal:openPortal,
+      closeUpdateModal:closePortal
+    }
+  }
+  const{UpdatePortal, isUpdateModalOpen,openUpdateModal,closeUpdateModal}=useUpdateModal();
 
   return (
     <div  className="flex flex-col h-fit w-full bg-slate-100  p-3 rounded-lg">
@@ -41,7 +58,7 @@ const AppelOffre = (props) => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               stroke-width="2"
-              onClick={openPortal}
+              onClick={openUpdateModal}
               >
               <path
                 stroke-linecap="round"
@@ -51,10 +68,10 @@ const AppelOffre = (props) => {
             </svg>
             </Tippy>
             {
-              isOpen &&
-              <Portal>
-                <DeleteModal/>
-              </Portal>
+              isUpdateModalOpen &&
+              <UpdatePortal>
+                <UpdateModal/>
+              </UpdatePortal>  
             }
           </div>
           <div className="flex p-2">
@@ -67,7 +84,7 @@ const AppelOffre = (props) => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
-              onClick={handleDelete}
+              onClick={openDeleteModal}
               >
               <path
                 strokeLinecap="round"
@@ -76,6 +93,12 @@ const AppelOffre = (props) => {
                 />
             </svg>
             </Tippy>
+            {
+              isDeleteModalOpen &&
+              <DeletionPortal>
+                <DeleteModal context={{idAppel,closeDeleteModal}}/>
+              </DeletionPortal>  
+            }
           </div>
         </div>
       </div>

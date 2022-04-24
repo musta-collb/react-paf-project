@@ -19,7 +19,7 @@ const Principale = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <NavBar links={myLinks} />
       <div className="">
         <Outlet />

@@ -4,6 +4,7 @@ import 'tippy.js/dist/tippy.css';
 import usePortal from 'react-useportal'
 import DeleteModal from "./DeleteModal";
 import UpdateModal from "./UpdateModal";
+import LinkButton from "../LinkButton";
 const AppelOffre = (props) => {
   //Route stuff
   const { id } = useParams();
@@ -35,7 +36,7 @@ const AppelOffre = (props) => {
   const{UpdatePortal, isUpdateModalOpen,openUpdateModal,closeUpdateModal}=useUpdateModal();
 
   return (
-    <div  className="flex flex-col h-fit w-full bg-slate-200 shadow-lg  p-3 rounded-lg">
+    <div  className="flex flex-col border-2 h-fit w-full bg-zinc-200 shadow-lg  p-3 rounded">
       {/* En-tête */}
       <div className="flex justify-between">
         <div className="flex flex-col">
@@ -55,7 +56,7 @@ const AppelOffre = (props) => {
               class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="orange"
               stroke-width="2"
               onClick={openUpdateModal}
               >
@@ -81,7 +82,7 @@ const AppelOffre = (props) => {
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="red"
               strokeWidth={2}
               onClick={openDeleteModal}
               >
@@ -112,9 +113,7 @@ const AppelOffre = (props) => {
         </div>
         {/* control */}
         <div className="flex flex-col justify-end space-5">
-          <button className="bg-red-500 rounded py-1 my-2 px-4 text-sm text-zinc-100 drop-shadow-xl">
-            <Link to={PARENTURL + `/${appelOffre.id}`}>Détails</Link>
-          </button>
+          <LinkButton settings={{to:PARENTURL + `/${appelOffre.id}`, color:"bg-zinc-800", text:"Détails"}}/>
         </div>
       </div>
     </div>

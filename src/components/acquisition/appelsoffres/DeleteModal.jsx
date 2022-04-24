@@ -11,7 +11,7 @@ const DeleteModal = ({context}) => {
         context.closeDeleteModal();
     }
     return ( 
-        <div className="flex items-center w-screen  h-screen bg-zinc-900 bg-opacity-50 absolute top-0 left-0 ">
+        <div className="flex items-center w-full  h-full bg-zinc-900 bg-opacity-50 absolute top-0 left-0 ">
             <div className="flex flex-col rounded-lg  m-auto mt-auto bg-zinc-200 p-[2em]">
                <div className="flex justify-between p-2 space-x-4 ">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="red" strokeWidth={2}>

@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
+import LinkButton from "../LinkButton";
 import { fetchAppelOffre } from "./apiCall";
 
 const DetailAppelOffre = () => {
@@ -92,9 +93,7 @@ const DetailAppelOffre = () => {
         </tbody>
       </table>
       <div className="flex justify-end px-4">
-        <Link to={PARENTURL} className=" rounded px-2 bg-red-300">
-          retour
-        </Link>
+        <LinkButton settings={{to:PARENTURL, color:"bg-zinc-800", text:"retour"}}/>
       </div>
     </div>
   );

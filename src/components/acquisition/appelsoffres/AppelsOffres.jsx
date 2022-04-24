@@ -3,18 +3,10 @@ import { Link } from "react-router-dom";
 import {useQuery} from "react-query";
 import Erreur from "../Erreur";
 import Loading from "../Loading";
-
-const fetchAO=async()=>{
-  const res=await fetch("http://localhost:5500/appelsoffres");
-  if(!res.ok){
-    throw new Error("Erreur!")
-  }
-  return res.json();
-}
+import { fetchAllAppelOffre } from "./apiCall";
 
 const AppelsOffres = () => {
-  
-  const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAO);
+  const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAllAppelOffre);
 
   if(isLoading) 
   return (

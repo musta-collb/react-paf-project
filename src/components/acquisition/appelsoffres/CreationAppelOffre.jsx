@@ -1,6 +1,11 @@
 import { useFieldArray, useForm } from "react-hook-form"
+import { useMutation } from "react-query";
 import SubmitButton from "../SubmitButton";
+import { createAppelOffre } from "./apiCall";
 export default function CreationAppelOffre() {
+    //mutation
+    const mutation=useMutation(createAppelOffre)
+    //Form shits
     const{register, handleSubmit, formState, control}=useForm({
         defaultValues:{biens:[{designation:'', descriptionBien:'', quantite:'',unite:''}]},
         mode:'onSubmit'
@@ -11,11 +16,7 @@ export default function CreationAppelOffre() {
     });
     const{errors}=formState;
     const onSubmit=async (data)=>{
-        await fetch("http://localhost:5500/appelsoffres",{
-            method:"POST",
-            headers:{"content-type":"application/json"},
-            body:JSON.stringify(data)
-        })
+        await mutation.mutate(data);
     }
     return (
         <div className="flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em]">

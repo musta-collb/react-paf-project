@@ -1,8 +1,13 @@
+import { useMutation } from "react-query";
 import SimpleButton from "../SimpleButton";
-
+import { deleteAppelOffre } from "./apiCall";
 const DeleteModal = ({context}) => {
+    // const mutation=useMutation(id=>{
+    //     return fetch("http://localhost:5500/appelsoffres/"+id,{method:"DELETE"});
+    // })
+    const mutation=useMutation(deleteAppelOffre);
     const handleDelete=async ()=>{
-        await fetch("http://localhost:5500/appelsoffres/"+context.idAppel,{method:"DELETE"});
+        await mutation.mutate(context.idAppel)
         context.closeDeleteModal();
     }
     return ( 

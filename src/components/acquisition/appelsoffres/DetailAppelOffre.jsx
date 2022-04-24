@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
-import fetchAO from "./fetchAO";
+import { fetchAppelOffre } from "./apiCall";
 
 const DetailAppelOffre = () => {
   //route related stuff
@@ -8,7 +8,7 @@ const DetailAppelOffre = () => {
   const { id } = useParams();
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
   //data fetching stuff
-  const{ data, isLoading, isError, error}=useQuery('detail_appel_offre', ()=>fetchAO("http://localhost:5500/appelsoffres/"+idAppel));
+  const{ data, isLoading, isError, error}=useQuery('detail_appel_offre', ()=>fetchAppelOffre(idAppel));
 
   if(isLoading) 
   return(

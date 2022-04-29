@@ -1,28 +1,22 @@
+import React, { PureComponent } from "react";
 import { Outlet, useParams } from "react-router-dom";
-import AppelsOffres from "../components/acquisition/AppelsOffres";
-// import Header from "../components/acquisition/Header";
 import SideBar from "../components/acquisition/SideBar";
-// import SideBarBeta from "../components/acquisition/sideBarBeta";
-const GestionAcquisition = () => {
+// import SideBar from "../components/sidebar2";
+
+const GestionStock = () => {
   const { id } = useParams();
-  console.log("id: " + id);
-  // NavBar side links
   const myLinks = [
     {
-      title: "Appel d'offres",
-      destination: `/personnel/${id}/acquisition/appelsoffres`,
+      title: "Articles",
+      destination: `/personnel/${id}/stock/categories`,
     },
     {
-      title: "Offres",
-      destination: `/personnel/${id}/acquisition/offres`,
+      title: "Nouveau Article",
+      destination: `/personnel/${id}/stock/nouveauArticle`,
     },
     {
-      title: "Marché",
-      destination: `/personnel/${id}/acquisition/marche`,
-    },
-    {
-      title: "Fournisseurs",
-      destination: `/personnel/${id}/acquisition/fournisseurs`,
+      title: "Noficications",
+      destination: `/personnel/${id}/stock/notifications`,
     },
   ];
   const user = {
@@ -38,8 +32,9 @@ const GestionAcquisition = () => {
   return (
     <div className="flex flex-col w-full">
       {/* header */}
-      <div className="flex sm:flex-row flex-col">
+      <div className="flex sm:flex-row flex-col ">
         {/* sidebar */}
+        {/* <SideBar links={myLinks} /> */}
         <SideBar links={myLinks} user={user} />
         {/* <SideBarBeta /> */}
         {/* content */}
@@ -50,4 +45,4 @@ const GestionAcquisition = () => {
   );
 };
 
-export default GestionAcquisition;
+export default GestionStock;

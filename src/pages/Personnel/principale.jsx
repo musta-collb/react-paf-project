@@ -17,6 +17,16 @@ const Principale = () => {
       destination: `/personnel/${id}/acquisition/appelsoffres`,
       active: true,
     },
+    {
+      title: "stock",
+      destination: `/personnel/${id}/stock/categories`,
+      active: true,
+    },
+    {
+      title: "reclamation",
+      destination: `/personnel/${id}/reclamation/garanties`,
+      active: true,
+    },
   ];
   return (
     <div className="w-full">

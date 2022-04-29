@@ -1,28 +1,19 @@
+import React, { PureComponent } from "react";
 import { Outlet, useParams } from "react-router-dom";
-import AppelsOffres from "../components/acquisition/AppelsOffres";
-// import Header from "../components/acquisition/Header";
 import SideBar from "../components/acquisition/SideBar";
-// import SideBarBeta from "../components/acquisition/sideBarBeta";
-const GestionAcquisition = () => {
+
+const Reclamation = () => {
   const { id } = useParams();
   console.log("id: " + id);
   // NavBar side links
   const myLinks = [
     {
-      title: "Appel d'offres",
-      destination: `/personnel/${id}/acquisition/appelsoffres`,
+      title: "Garanties",
+      destination: `/personnel/${id}/reclamation/garanties`,
     },
     {
-      title: "Offres",
-      destination: `/personnel/${id}/acquisition/offres`,
-    },
-    {
-      title: "Marché",
-      destination: `/personnel/${id}/acquisition/marche`,
-    },
-    {
-      title: "Fournisseurs",
-      destination: `/personnel/${id}/acquisition/fournisseurs`,
+      title: "Nouvelle Garantie",
+      destination: `/personnel/${id}/reclamation/nouvelleGarantie`,
     },
   ];
   const user = {
@@ -50,4 +41,4 @@ const GestionAcquisition = () => {
   );
 };
 
-export default GestionAcquisition;
+export default Reclamation;

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 
 const Marche = () => {
-  return <div>hello marché</div>;
+  return <div className="w-full">hello marché</div>;
 };
 
 export default Marche;

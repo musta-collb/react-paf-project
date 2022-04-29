@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
 const Offers = () => {
-  return <div>hello offers</div>;
+  return <div className="w-full">hello offers</div>;
 };
 export default Offers;

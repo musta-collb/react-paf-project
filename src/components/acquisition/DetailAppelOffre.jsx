@@ -6,7 +6,7 @@ const DetailAppelOffre = () => {
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
   console.log("idOffre: " + { idOffre });
   return (
-    <div className="flex flex-col grow space-y-2 p-2 overflow-y-auto">
+    <div className="flex flex-col grow w-full space-y-2 p-2 overflow-y-auto">
       <div className="">
         <span className="text-lg font-bold">Informations générales</span>
       </div>

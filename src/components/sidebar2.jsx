@@ -11,9 +11,9 @@ const SideBar = (props) => {
   const [showMenu, setShowMenu] = useState(false);
   const handleClick = () => setShowMenu((current) => !current);
   return (
-    <div className="md:w-4/12 sm:w-full md:min-h-full">
+    <div className="md:w-4/12 sm:full">
       {/* Desktop screens */}
-      <div class="flex flex-col md:block hidden md:full sm:w-full md:min-h-screen md:h-full p-1 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
+      <div class="flex flex-col md:block hidden md:full sm:w-full md:min-h-screen p-1 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
         <div class="flex md:flex-col sm:flex-row justify-center items-center sm:mt-1 md:mt-6 md:mx-2">
           <img
             class="object-cover xs:hidden sm:w-14 sm:h-14 mx-2 rounded-full"

@@ -1,9 +1,5 @@
 const CreationAppelOffre = () => {
-    return ( 
-        <div className="flex flex-col grow overflow-y-auto">
+  return <div className="flex flex-col grow w-full overflow-y-auto"></div>;
+};
 
-        </div>
-     );
-}
- 
 export default CreationAppelOffre;

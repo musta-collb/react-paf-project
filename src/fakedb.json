@@ -1,4 +1,65 @@
-{
+{ "offres":[
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "reference_ao":"A67KL899",
+    "fournisseur":"Marjane",
+    "biens":[
+      {
+        "designation":"dkfksdkfd",
+        "quantite":"dlkflkdjfkd",
+        "marque":"ksdfkdkfjd",
+        "unite":"sldkjkdjfkld",
+        "prix_unitaire":"kjhjhjjhk"
+      }
+    ]
+  },
+  {
+    "id":2,
+    "date":"12-23-2017",
+    "reference_ao":"A67KL899",
+    "fournisseur":"Marjane",
+    "biens":[
+      {
+        "designation":"dkfksdkfd",
+        "quantite":"dlkflkdjfkd",
+        "marque":"ksdfkdkfjd",
+        "unite":"sldkjkdjfkld",
+        "prix_unitaire":"kjhjhjjhk"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "date":"12-23-2017",
+    "reference_ao":"A67KL899",
+    "fournisseur":"Marjane",
+    "biens":[
+      {
+        "designation":"dkfksdkfd",
+        "quantite":"dlkflkdjfkd",
+        "marque":"ksdfkdkfjd",
+        "unite":"sldkjkdjfkld",
+        "prix_unitaire":"kjhjhjjhk"
+      }
+    ]
+  },
+  {
+    "id":4,
+    "reference_ao":"A67KL899",
+    "date":"12-23-2017",
+    "fournisseur":"Marjane",
+    "biens":[
+      {
+        "designation":"dkfksdkfd",
+        "quantite":"dlkflkdjfkd",
+        "marque":"ksdfkdkfjd",
+        "unite":"sldkjkdjfkld",
+        "prix_unitaire":"kjhjhjjhk"
+      }
+    ]
+  }
+],
   "appelsoffres": [
     {
       "biens": [
@@ -9,12 +70,28 @@
           "unite": "MLSDFMLDKFD"
         }
       ],
-      "reference": "AO10012022",
+      "reference": "AO_01",
+      "objet": "Cool",
+      "budget": "10000",
+      "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "dateLimite": "2022-04-10",
+      "id": 12
+    },
+    {
+      "biens": [
+        {
+          "designation": "MLKFMLKSDMFD",
+          "descriptionBien": "SMDFKDMLKFMLD",
+          "quantite": "MSDLKFMKDLFD",
+          "unite": "MLSDFMLDKFD"
+        }
+      ],
+      "reference": "AO_02",
       "objet": "SLLKQSDKSKDLS",
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 15
     },
     {
       "biens": [
@@ -30,7 +107,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 16
     },
     {
       "biens": [
@@ -46,7 +123,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 18
     },
     {
       "biens": [
@@ -62,7 +139,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 19
     },
     {
       "biens": [
@@ -78,7 +155,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 20
     },
     {
       "biens": [
@@ -94,7 +171,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 21
     },
     {
       "biens": [
@@ -110,7 +187,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 22
     },
     {
       "biens": [
@@ -126,7 +203,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 23
     },
     {
       "biens": [
@@ -142,7 +219,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 24
     },
     {
       "biens": [
@@ -158,7 +235,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 25
     },
     {
       "biens": [
@@ -174,7 +251,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 26
     },
     {
       "biens": [
@@ -190,7 +267,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 27
     },
     {
       "biens": [
@@ -206,7 +283,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 29
     },
     {
       "biens": [
@@ -222,7 +299,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 30
     },
     {
       "biens": [
@@ -238,7 +315,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 31
     },
     {
       "biens": [
@@ -254,7 +331,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 33
     },
     {
       "biens": [
@@ -270,7 +347,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 34
     },
     {
       "biens": [
@@ -286,7 +363,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 35
     },
     {
       "biens": [
@@ -302,23 +379,7 @@
       "budget": "LSDSKDJQSK",
       "description": "QSLDKSKLDJS",
       "dateLimite": "2022-04-10",
-      "id": 14
-    },
-    {
-      "biens": [
-        {
-          "designation": "MLKFMLKSDMFD",
-          "descriptionBien": "SMDFKDMLKFMLD",
-          "quantite": "MSDLKFMKDLFD",
-          "unite": "MLSDFMLDKFD"
-        }
-      ],
-      "reference": "AO10012022",
-      "objet": "SLLKQSDKSKDLS",
-      "budget": "LSDSKDJQSK",
-      "description": "QSLDKSKLDJS",
-      "dateLimite": "2022-04-10",
-      "id": 14
+      "id": 36
     }
   ]
 }

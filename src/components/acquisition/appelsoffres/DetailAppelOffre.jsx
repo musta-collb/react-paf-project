@@ -91,7 +91,7 @@ const DetailAppelOffre = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+        </table>
       <div className="flex justify-end px-4">
         <LinkButton settings={{to:PARENTURL, color:"bg-zinc-800", text:"retour"}}/>
       </div>

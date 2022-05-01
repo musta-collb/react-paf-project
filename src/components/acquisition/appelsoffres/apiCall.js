@@ -8,6 +8,13 @@ export const createAppelOffre = appelOffre=>{
         body:JSON.stringify(appelOffre)
     })
 }
+export const updateAppelOffre = appelOffre=>{
+    return fetch("http://localhost:5500/appelsoffres/"+appelOffre.id,{
+        method:"PUT",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify(appelOffre)
+    })
+}
 export const fetchAllAppelOffre = async()=>{
     const res= await fetch("http://localhost:5500/appelsoffres");
     if(!res.ok) {

@@ -28,7 +28,7 @@ const SideBar = (props) => {
             /*</div>*//*}*/
             <div className=" text-white flex w-full items-center h-16 rounded-2xl hover:bg-blue-700 pl-2 space-x-2">
                 <div className="w-8 h-8 flex justify-center rounded-full shadow-lg text-2xl font-medium bg-blue-500">{link.title[0]}</div>
-                <Link to="appelsoffres">{link.title}</Link>
+                <Link to={link.destination}>{link.title}</Link>
             </div>
               
             );

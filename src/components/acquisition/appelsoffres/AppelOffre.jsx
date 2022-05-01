@@ -41,11 +41,11 @@ const AppelOffre = (props) => {
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h1>
-            <span className="font-semibold">Reference :</span>{" "}
+            <span className="font-semibold text-sm">Reference :</span>{" "}
             {appelOffre.reference}
           </h1>
           <span>
-            <span className="font-semibold">date</span>: {appelOffre.date}
+            <span className="font-semibold text-sm">date</span>: {appelOffre.date}
           </span>
         </div>
         <div className="flex justify-between space-x-5 items-center">
@@ -53,11 +53,12 @@ const AppelOffre = (props) => {
             <Tippy content="Modifier">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="orange"
               stroke-width="2"
+              data-modal-toggle="update-modal"
               onClick={openUpdateModal}
               >
               <path
@@ -70,13 +71,12 @@ const AppelOffre = (props) => {
             {
               isUpdateModalOpen &&
               <UpdatePortal>
-                <UpdateModal/>
+                <UpdateModal context={{idAppel:appelOffre.id,closeUpdateModal}}/>
               </UpdatePortal>  
             }
           </div>
           <div className="flex p-2">
             <Tippy content="Suprimer">
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -108,7 +108,7 @@ const AppelOffre = (props) => {
       <div className="flex justify-between">
         {/* body */}
         <div className="">
-          <span className="font-bold">objet: </span>
+          <span className="font-bold text-sm">objet: </span>
           {appelOffre.objet}
         </div>
         {/* control */}

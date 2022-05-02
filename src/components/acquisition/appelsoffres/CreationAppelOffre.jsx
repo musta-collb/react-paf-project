@@ -29,7 +29,7 @@ export default function CreationAppelOffre() {
                 <input 
                 type="text" 
                 className="outline:none rounded-lg h-8 border-zinc-300"
-                {...register("reference",{required:"La référence est oblogatoire"})}
+                {...register("reference",{required:"La référence est obligatoire"})}
                 />
                 <span className="text-sm text-red-700">{errors.reference?.message}</span>
                 <label htmlFor="reference" className="text-zinc-500">Objet du marché</label>

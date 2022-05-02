@@ -13,10 +13,13 @@ import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAp
 import DetailAppelOffre from "./components/acquisition/appelsoffres/DetailAppelOffre.jsx";
 import GestionAcquisition from "./pages/GestionAcquisition.jsx";
 import Principale from "./pages/Personnel/principale.jsx";
-import Offers from "./components/acquisition/offres/Offres.jsx";
+import Offres from "./components/acquisition/offres/Offres.jsx";
 import Marche from "./components/acquisition/marches/Marche.jsx";
 import { QueryClientProvider,QueryClient } from "react-query";
 import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseur.jsx";
+import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
+import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
+import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcquisition.jsx";
 const queryClient=new QueryClient();
 function App() {
   return (
@@ -48,6 +51,7 @@ function App() {
         <Route path="/personnel/:id">
           <Route path="" element={<Principale />}>
             <Route path="acquisition" element={<GestionAcquisition />}>
+              <Route path="" element={<TableauDeBordAcquisition/>}/>
               <Route path="appelsoffres" element={<AppelsOffres />}/>
               <Route
                 path="appelsoffres/:idAppel"
@@ -57,7 +61,15 @@ function App() {
                 path="creationappelsoffres"
                 element={<CreationAppelOffre />}
                 />
-              <Route path="offres" element={<Offers />} />
+              <Route path="offres" element={<Offres/>} />
+              <Route
+                path="offres/:idOffre"
+                element={<DetailsOffre/>}
+              />
+              <Route
+                path="creationoffres"
+                element={<CreationOffre/>}
+              />
               <Route path="marche" element={<Marche />} />
               <Route path="fournisseurs" element={<Fournisseurs />} />
             </Route>

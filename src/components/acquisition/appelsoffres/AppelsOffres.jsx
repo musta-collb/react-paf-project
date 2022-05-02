@@ -21,7 +21,7 @@ const AppelsOffres = () => {
   return (
     <div  className="flex flex-col grow space-y-2 ">
       {/* en-tête */}
-      <div className="flex  flex-col flew-none drop shadow-lg px-4  pt-1 pb-2">
+      <div className="flex  flex-col flex-none drop shadow-lg px-4  pt-1 pb-2">
         <h1 className=" font-bold text-2xl text-zinc-600">
           Les appels d'offres
         </h1>

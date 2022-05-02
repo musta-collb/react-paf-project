@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import Offre from "./Offre";
 
-const Offers = () => {
+const Offres = () => {
   const{isLoading, isError, data, error,status}=useQuery('offres',fetchAllOffres);
 
   if(isLoading) 
@@ -20,9 +20,9 @@ const Offers = () => {
   } 
   
   return (
-    <div  className="flex flex-col grow space-y-2 ">
+    <div  className="flex flex-col grow space-y-2">
       {/* en-tête */}
-      <div className="flex  flex-col flew-none drop shadow-lg px-4  pt-1 pb-2">
+      <div className="flex  flex-col flex-none drop shadow-lg px-4  pt-1 pb-2">
         <h1 className=" font-bold text-2xl text-zinc-600">
           Les offres
         </h1>
@@ -43,7 +43,7 @@ const Offers = () => {
               />
             </svg>
             <Link
-              to="../creationappelsoffres"
+              to="../creationoffres"
               className="font-semibold text-sm text-white "
             >
               Ajouter
@@ -51,12 +51,12 @@ const Offers = () => {
           </button>
         </div>
       </div>
-      {/* Les appels d'offres */}
-      <div className="p-3  flex flex-col flex-auto space-y-2 overflow-y-auto h-screen scrollbar ">
+      {/* Les offres d'offres */}
+      <div className="p-3  flex flex-col flex-auto space-y-2 h-screen overflow-y-auto scrollbar ">
         {data.map((o) => (
-          <Offre offre={o}/>
+           <Offre offre={o}/>
         ))}
       </div>
     </div>);
 }
-export default Offers;
+export default Offres;

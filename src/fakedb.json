@@ -1,130 +1,296 @@
-{ "offres":[
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "reference_ao":"A67KL899",
-    "fournisseur":"Marjane",
-    "biens":[
-      {
-        "designation":"dkfksdkfd",
-        "quantite":"dlkflkdjfkd",
-        "marque":"ksdfkdkfjd",
-        "unite":"sldkjkdjfkld",
-        "prix_unitaire":"kjhjhjjhk"
-      }
-    ]
-  },
-  {
-    "id":2,
-    "date":"12-23-2017",
-    "reference_ao":"A67KL899",
-    "fournisseur":"Marjane",
-    "biens":[
-      {
-        "designation":"dkfksdkfd",
-        "quantite":"dlkflkdjfkd",
-        "marque":"ksdfkdkfjd",
-        "unite":"sldkjkdjfkld",
-        "prix_unitaire":"kjhjhjjhk"
-      }
-    ]
-  },
-  {
-    "id":3,
-    "date":"12-23-2017",
-    "reference_ao":"A67KL899",
-    "fournisseur":"Marjane",
-    "biens":[
-      {
-        "designation":"dkfksdkfd",
-        "quantite":"dlkflkdjfkd",
-        "marque":"ksdfkdkfjd",
-        "unite":"sldkjkdjfkld",
-        "prix_unitaire":"kjhjhjjhk"
-      }
-    ]
-  },
-  {
-    "id":4,
-    "reference_ao":"A67KL899",
-    "date":"12-23-2017",
-    "fournisseur":"Marjane",
-    "biens":[
-      {
-        "designation":"dkfksdkfd",
-        "quantite":"dlkflkdjfkd",
-        "marque":"ksdfkdkfjd",
-        "unite":"sldkjkdjfkld",
-        "prix_unitaire":"kjhjhjjhk"
-      }
-    ]
-  }
-],
+{
+  "offres": [
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "reference_ao": "A67KL899",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "12-23-2017",
+      "reference_ao": "A67KL899",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "12-23-2017",
+      "reference_ao": "A67KL899",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "reference_ao": "A67KL899",
+      "date": "12-23-2017",
+      "fournisseur": {
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+      },
+      "biens": [
+        {
+          "designation": "dkfksdkfd",
+          "quantite": "dlkflkdjfkd",
+          "marque": "ksdfkdkfjd",
+          "unite": "sldkjkdjfkld",
+          "prix_unitaire": "kjhjhjjhk"
+        }
+      ]
+    },
+    {
+      "biens": [
+        {
+          "designation": "dcxcxdqsdqs",
+          "marque": "sfdsfsd",
+          "quantite": "sdsfdfsd",
+          "unite": "dsfdsfdfsd",
+          "prix_unitaire": "sdfsdfd",
+          "descriptionBien": ""
+        }
+      ],
+      "reference_ao": "LSKDFJSDKLJ",
+      "date": "2022-05-06",
+      "fournisseur": {
+        "raison_socilale": "smdlfkmlsdkmfsd",
+        "email": "msldkfmlsdkfd",
+        "telephone": "098-876-1213",
+        "adresse": "sdlfkdfkld",
+        "pays": "msldkflmdfd",
+        "code_postale": "sdfsdfd",
+        "secteur": "sdfsdfdfd",
+        "nb_annee_exp": "sdfdfdfd"
+      },
+      "id": 13
+    }
+  ],
   "appelsoffres": [
-    {
-      "biens": [
-        {
-          "designation": "MLKFMLKSDMFD",
-          "descriptionBien": "SMDFKDMLKFMLD",
-          "quantite": "MSDLKFMKDLFD",
-          "unite": "MLSDFMLDKFD"
-        }
-      ],
-      "reference": "AO_01",
-      "objet": "Cool",
-      "budget": "10000",
-      "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
-      "dateLimite": "2022-04-10",
-      "id": 12
-    },
-    {
-      "biens": [
-        {
-          "designation": "MLKFMLKSDMFD",
-          "descriptionBien": "SMDFKDMLKFMLD",
-          "quantite": "MSDLKFMKDLFD",
-          "unite": "MLSDFMLDKFD"
-        }
-      ],
-      "reference": "AO_02",
-      "objet": "SLLKQSDKSKDLS",
-      "budget": "LSDSKDJQSK",
-      "description": "QSLDKSKLDJS",
-      "dateLimite": "2022-04-10",
-      "id": 15
-    },
-    {
-      "biens": [
-        {
-          "designation": "MLKFMLKSDMFD",
-          "descriptionBien": "SMDFKDMLKFMLD",
-          "quantite": "MSDLKFMKDLFD",
-          "unite": "MLSDFMLDKFD"
-        }
-      ],
-      "reference": "AO10012022",
-      "objet": "SLLKQSDKSKDLS",
-      "budget": "LSDSKDJQSK",
-      "description": "QSLDKSKLDJS",
-      "dateLimite": "2022-04-10",
-      "id": 16
-    },
-    {
-      "biens": [
-        {
-          "designation": "MLKFMLKSDMFD",
-          "descriptionBien": "SMDFKDMLKFMLD",
-          "quantite": "MSDLKFMKDLFD",
-          "unite": "MLSDFMLDKFD"
-        }
-      ],
-      "reference": "AO10012022",
-      "objet": "SLLKQSDKSKDLS",
-      "budget": "LSDSKDJQSK",
-      "description": "QSLDKSKLDJS",
-      "dateLimite": "2022-04-10",
-      "id": 18
-    },
     {
       "biens": [
         {

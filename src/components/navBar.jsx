@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const { links } = props;
+  console.log("in navbar",links)
   const style = {
     zIndex: 10000,
   };
@@ -19,7 +20,7 @@ const NavBar = (props) => {
                 {/** Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 {links.map((item) => {
                   return (
-                    <Link to={item.destination}>
+                    <Link key={item } to={item.destination}>
                       <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         {item.title}
                       </p>

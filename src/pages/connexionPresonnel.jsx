@@ -28,20 +28,17 @@ const LoginPersonnel = () => {
   } = useForm();
   //handle login 
   const onSubmit = async(data) => {
-      try{
+      
         await login(data.email, data.password);
-        navigate("/accueil/acquisition/i");
-      }
-      catch(e){
-        console.log(e)
-      }
+        navigate('/personnel/1/acquisition');
+      
   };
     // useEffect(()=>{
     //   if(user && isAuthenticated){
     //     //this is where the problem happens
     //     console.log("current user",user);
     //     console.log("current state",isAuthenticated)
-    //     //navigate('/personel/1/acquisition');
+    //     //navigate('/personel//acquisition');
     //     navigate("../acquisition")
         
     //   }

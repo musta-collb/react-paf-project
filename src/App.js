@@ -20,6 +20,10 @@ import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseur.jsx"
 import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
 import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
 import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcquisition.jsx";
+//Gestion ticket import
+import DetailsTicket from "./components/ticket/DetailsTicket.jsx"
+import ListTickets from "./components/ticket/ListTickets.jsx"
+import GestionTickets from "./pages/GestionTickets.jsx"
 const queryClient=new QueryClient();
 function App() {
   return (
@@ -72,6 +76,10 @@ function App() {
               />
               <Route path="marche" element={<Marche />} />
               <Route path="fournisseurs" element={<Fournisseurs />} />
+            </Route>
+            <Route path="ticket_reclamation" element={<GestionTickets/>}>
+              <Route path="" element={<ListTickets/>}/>
+              <Route path=":id" element={<DetailsTicket/>}/>
             </Route>
           </Route>
         </Route>

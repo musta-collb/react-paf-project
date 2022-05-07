@@ -22,6 +22,7 @@ import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
 import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
 import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcquisition.jsx";
 import { AuthProvider } from "./contexts/JWTAuthContext.js";
+import Accueil from "./pages/Accueil.jsx";
 const queryClient=new QueryClient();
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Index />}/>
+          <Route path="/accueil" element={<AuthGuard ROLE="EMPLOYEE"><Accueil/></AuthGuard>}/>
 
           <Route path="/personnel">
             <Route path="login" element={<LoginPersonnel />}/>
@@ -53,7 +55,11 @@ function App() {
           </Route>
 
           <Route path="/personnel/:id" >
-            <Route path="" element={<Principale />}>
+            <Route path="" element={ 
+              <AuthGuard ROLE="ACQUISITION">
+                <Principale />
+              </AuthGuard>
+            }>
               <Route path="acquisition" element={<GestionAcquisition />}>
                 <Route 
                   path="" 

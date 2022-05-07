@@ -6,8 +6,9 @@
         "email": "bruno@email.com",
         "password": "bruno",
         "roles":[
+            "EMPLOYEE",
             "ACQUISITION",
-            "AFECTATION"
+            "AFFECTATION"
         ]
       },
       {

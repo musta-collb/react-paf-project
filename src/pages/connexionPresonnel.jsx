@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "../components/footer";
-import { useEffect } from "react";
 import NavBar from "../components/navBar";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth.js";
 import {useNavigate, Navigate } from 'react-router-dom';
+
 
 
 const LoginPersonnel = () => {
@@ -29,20 +29,17 @@ const LoginPersonnel = () => {
   //handle login 
   const onSubmit = async(data) => {
       
-        await login(data.email, data.password);
-        navigate('/personnel/1/acquisition');
-      
+        try{
+          console.log("loging ...")
+          await login(data.email, data.password);
+          navigate("/accueil")
+          //window.location.reload();
+          console.log(user)
+        }
+        catch(e){
+          console.log(e)
+        }
   };
-    // useEffect(()=>{
-    //   if(user && isAuthenticated){
-    //     //this is where the problem happens
-    //     console.log("current user",user);
-    //     console.log("current state",isAuthenticated)
-    //     //navigate('/personel//acquisition');
-    //     navigate("../acquisition")
-        
-    //   }
-    // },[user])
   return (
     <>
     <div className="min-h-full mb-0">

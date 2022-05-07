@@ -6,7 +6,7 @@ import Loading from '../components/acquisition/Loading.jsx'
 const initialState = {
     isAuthenticated: false,
     isInitialised: true,
-    user: {roles:['ACQUISITION']},
+    user:null,
 }
 
 const isValidToken = (accessToken) => {
@@ -99,7 +99,7 @@ export const AuthProvider = ({ children }) => {
                 user,
             },
         })
-        console.log("doen dispatching")
+        console.log("done dispatching")
     }
 
     const register = async (email, username, password) => {

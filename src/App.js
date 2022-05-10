@@ -79,7 +79,7 @@ function App() {
             </Route>
             <Route path="ticket_reclamation" element={<GestionTickets/>}>
               <Route path="" element={<ListTickets/>}/>
-              <Route path=":id" element={<DetailsTicket/>}/>
+              <Route path=":idTicket" element={<DetailsTicket/>}/>
             </Route>
           </Route>
         </Route>

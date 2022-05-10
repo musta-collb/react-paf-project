@@ -1,26 +1,27 @@
 import LinkButton from "../acquisition/LinkButton";
 
-const Ticket=()=>{
+const Ticket=({ticket})=>{
+    console.log(ticket)
     return ( 
-        <div className="flex justify-between  items-center  p-4">
+        <div className="flex justify-between  items-center  shadow py-1 px-4 bg-zinc-100 rounded">
             <div className="flex items-center space-x-4">
-                <div className="">ID_Ticket</div>
-                <span className="">001</span>
+                <div className="font-bold">ID_Ticket: </div>
+                <span className="">{ticket.id}</span>
             </div>
             <div className="flex  space-x-4 items-center">                
                 <div className="flex space-x-4">
-                    <div className="">Etat</div>
-                    <span className="">Ouvert</span>
+                    <div className="font-semibold">Etat: </div>
+                    <span className={ticket.etat==="OUVERT"? `px-2 rounded-lg bg-blue-400`:`px-2 rounded-lg bg-green-400`}>{ticket.etat}</span>
                 </div>
                 <div className="flex flex space-x-4">
                     <div className="">Commentaires</div>
-                    <span className="">1</span>
+                    <span className="">{ticket.commentaires.length}</span>
                 </div>
                 <div className="flex flex space-x-4">
-                    <div className="">Intervention</div>
-                    <span className="">0</span>
+                    <div className="">Interventions</div>
+                    <span className="">{ticket.interventions.length}</span>
                 </div>
-                <LinkButton settings={{to:"/", text:"plus ...", color:"bg-zinc-800"}}/>
+                <LinkButton settings={{to:`${ticket.id}`, text:"plus ...", color:"bg-zinc-800"}}/>
             </div>
         </div>
     );

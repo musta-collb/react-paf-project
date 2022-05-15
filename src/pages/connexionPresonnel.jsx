@@ -4,7 +4,7 @@ import NavBar from "../components/navBar";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth.js";
-import {useNavigate, Navigate } from 'react-router-dom';
+import {useNavigate, Navigate, Outlet } from 'react-router-dom';
 
 
 
@@ -32,7 +32,7 @@ const LoginPersonnel = () => {
         try{
           console.log("loging ...")
           await login(data.email, data.password);
-          navigate("/accueil")
+          navigate('/personnel/login/personnel/1/acquisition')
           //window.location.reload();
           console.log(user)
         }
@@ -53,13 +53,13 @@ const LoginPersonnel = () => {
           {/* form */}
           <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
             {/* email */}
-            <div class="mb-3 md:mx-auto space-y-2 w-full md:w-1/2 font-lora text-base bolder">
-              <label class="font-semibold text-gray-600 py-2">
+            <div className="mb-3 md:mx-auto space-y-2 w-full md:w-1/2 font-lora text-base bolder">
+              <label className="font-semibold text-gray-600 py-2">
                 Email <abbr title="required">*</abbr>
               </label>
               <input
                 placeholder="email"
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                 type="email"
                 id="emaill_personnel"
                 {...register("email", {
@@ -81,7 +81,7 @@ const LoginPersonnel = () => {
               </label>
               <input
                 placeholder="password"
-                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                 type="password"
                 id="password_personnel"
                 {...register("password", {

@@ -34,7 +34,28 @@ function App() {
           <Route path="/accueil" element={<AuthGuard ROLE="EMPLOYEE"><Accueil/></AuthGuard>}/>
 
           <Route path="/personnel">
-            <Route path="login" element={<LoginPersonnel />}/>
+            <Route path="login" element={<LoginPersonnel />}>
+            <Route path="personnel/:id">
+            <Route path="" element={ 
+              <AuthGuard ROLE="ACQUISITION">
+                <Principale />
+              </AuthGuard>
+            }>
+              <Route path="acquisition" element={<GestionAcquisition />}>
+                <Route path="" element={<TableauDeBordAcquisition/>}/>
+                <Route path="appelsoffres" element={<AppelsOffres />}/>
+                <Route path="appelsoffres/:idAppel" element={<DetailAppelOffre />}/> 
+                <Route path="creationappelsoffres" element={<CreationAppelOffre />}/>
+                <Route path="offres" element={<Offres/>} />
+                <Route path="offres/:idOffre" element={<DetailsOffre/>}/>
+                <Route path="creationoffres" element={<CreationOffre/>}/>
+                <Route path="marche" element={<Marche />}/>
+                <Route path="fournisseurs" element={<Fournisseurs />} />
+              </Route>
+            </Route>
+          </Route>
+          
+            </Route>
             <Route path="password" element={<MotDePassePage />}/>
           </Route>
 
@@ -54,40 +75,21 @@ function App() {
             </Route>
           </Route>
 
-          <Route path="/personnel/:id" >
-            <Route path="" element={ 
+          <Route path="/personnel" >
+            <Route path=":id" element={ 
               <AuthGuard ROLE="ACQUISITION">
                 <Principale />
               </AuthGuard>
             }>
               <Route path="acquisition" element={<GestionAcquisition />}>
-                <Route 
-                  path="" 
-                  element={<TableauDeBordAcquisition/>}
-                  />
-                <Route 
-                  path="appelsoffres" 
-                  element={<AppelsOffres />}
-                  />
-                <Route
-                  path="appelsoffres/:idAppel"
-                  element={<DetailAppelOffre />}
-                  /> 
-                <Route
-                  path="creationappelsoffres"
-                  element={<CreationAppelOffre />}
-                  />
+                {/* <Route path="" element={<TableauDeBordAcquisition/>}/> */}
+                <Route path="appelsoffres" element={<AppelsOffres />}/>
+                <Route path="appelsoffres/:idAppel" element={<DetailAppelOffre />}/> 
+                <Route path="creationappelsoffres" element={<CreationAppelOffre />}/>
                 <Route path="offres" element={<Offres/>} />
-                <Route
-                  path="offres/:idOffre"
-                  element={<DetailsOffre/>}
-                />
-                <Route
-                  path="creationoffres"
-                  element={<CreationOffre/>}
-                />
-                <Route path="marche" element={<Marche />} />
-
+                <Route path="offres/:idOffre" element={<DetailsOffre/>}/>
+                <Route path="creationoffres" element={<CreationOffre/>}/>
+                <Route path="marche" element={<Marche />}/>
                 <Route path="fournisseurs" element={<Fournisseurs />} />
               </Route>
             </Route>

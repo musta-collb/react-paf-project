@@ -8,6 +8,7 @@ import LoginFournisseur from "./pages/connexionFournisseur.jsx";
 import AdminPersonnel from "./pages/admin/adminPersonnel.jsx";
 import EditPersonnel from "./pages/admin/editPersonnel.jsx";
 // Manavana
+//GestionAcquiqition Import
 import AppelsOffres from "./components/acquisition/appelsoffres/AppelsOffres.jsx";
 import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAppelOffre.jsx";
 import DetailAppelOffre from "./components/acquisition/appelsoffres/DetailAppelOffre.jsx";
@@ -24,6 +25,13 @@ import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcqu
 import DetailsTicket from "./components/ticket/DetailsTicket.jsx"
 import ListTickets from "./components/ticket/ListTickets.jsx"
 import GestionTickets from "./pages/GestionTickets.jsx"
+//Gestion Affectation imports
+import GestionAffectations from "./pages/GestionAffectaions.jsx"
+import ListAffectations from "./components/affectation/ListAffectations.jsx";
+import CreationAffectation from "./components/affectation/CreationAffectation.jsx";
+import DetailsAffectation from "./components/affectation/DetailsAffectation.jsx";
+
+
 const queryClient=new QueryClient();
 function App() {
   return (
@@ -35,7 +43,6 @@ function App() {
           <Route path="login" element={<LoginPersonnel />}></Route>
           <Route path="password" element={<MotDePassePage />}></Route>
         </Route>
-{/*??????????????????????*/}
         <Route path="/fournisseur">
           <Route path="signup" element={<InscriptionFournisseur />} />
           <Route path="login" element={<LoginFournisseur />} />
@@ -54,32 +61,28 @@ function App() {
 
         <Route path="/personnel/:id">
           <Route path="" element={<Principale />}>
+            {/*Gestion Acquisition*/}
             <Route path="acquisition" element={<GestionAcquisition />}>
               <Route path="" element={<TableauDeBordAcquisition/>}/>
               <Route path="appelsoffres" element={<AppelsOffres />}/>
-              <Route
-                path="appelsoffres/:idAppel"
-                element={<DetailAppelOffre />}
-                /> 
-              <Route
-                path="creationappelsoffres"
-                element={<CreationAppelOffre />}
-                />
+              <Route path="appelsoffres/:idAppel" element={<DetailAppelOffre />}/> 
+              <Route path="creationappelsoffres" element={<CreationAppelOffre />}/>
               <Route path="offres" element={<Offres/>} />
-              <Route
-                path="offres/:idOffre"
-                element={<DetailsOffre/>}
-              />
-              <Route
-                path="creationoffres"
-                element={<CreationOffre/>}
-              />
+              <Route path="offres/:idOffre" element={<DetailsOffre/>}/>
+              <Route path="creationoffres" element={<CreationOffre/>}/>
               <Route path="marche" element={<Marche />} />
               <Route path="fournisseurs" element={<Fournisseurs />} />
             </Route>
+            {/*gestion ticket*/}
             <Route path="ticket_reclamation" element={<GestionTickets/>}>
               <Route path="" element={<ListTickets/>}/>
               <Route path=":idTicket" element={<DetailsTicket/>}/>
+            </Route>
+            {/*Gestion affectation*/}
+            <Route path="affectation" element={<GestionAffectations/>}>
+              <Route path="" element={<ListAffectations/>}/>
+              <Route path=":idAffectation" element={<DetailsAffectation/>}/>
+              <Route path="creation" element={<CreationAffectation/>}/>
             </Route>
           </Route>
         </Route>

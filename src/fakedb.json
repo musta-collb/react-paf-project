@@ -1,18 +1,35 @@
 { 
   "affectations":[
     {
+      "id":2,
+      "date":"12-23-2017",
+      "details":"djfjsdfjd",
+      "duree":"indeterminée",
+      "exploiteur":{
+        "description":"Bureau du directeur",
+        "type":"Bureau",
+        "responsable":"Mr Jean"
+      },
+      "articles":[
+        {"designation":"Souris"},
+        {"designation":"Ordinateur"},
+        {"designation":"Imprimante"}
+      ]
+    },
+    {
       "id":1,
       "date":"12-23-2017",
       "details":"djfjsdfjd",
       "duree":"indeterminée",
       "exploiteur":{
-        "description":"description",
-        "type":"type"
+        "description":"Resaponsable IT",
+        "type":"Personnel",
+        "responsable":"Alice"
       },
       "articles":[
-        {"designation":"dslkfkdfs"},
-        {"designation":"dslkfkdfs"},
-        {"designation":"dslkfkdfs"}
+        {"designation":"Chaise"},
+        {"designation":"Table"},
+        {"designation":"Tableau"}
       ]
     },
     {
@@ -22,22 +39,8 @@
       "duree":"indeterminée",
       "exploiteur":{
         "description":"description",
-        "type":"type"
-      },
-      "articles":[
-        {"designation":"dslkfkdfs"},
-        {"designation":"dslkfkdfs"},
-        {"designation":"dslkfkdfs"}
-      ]
-    },
-    {
-      "id":1,
-      "date":"12-23-2017",
-      "details":"djfjsdfjd",
-      "duree":"indeterminée",
-      "exploiteur":{
-        "description":"description",
-        "type":"type"
+        "type":"Departement",
+        "responsable":"Mr BOB"
       },
       "articles":[
         {"designation":"dslkfkdfs"},

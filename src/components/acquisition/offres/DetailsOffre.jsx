@@ -6,12 +6,12 @@ import { fetchOffre } from "./apiCalls";
 import LinkButton from "../LinkButton";
 
 const DetailsOffre = () => {
-    //route related stuff
+  //route related stuff
   const { idOffre } = useParams();
   const { id } = useParams();
   const PARENTURL = `/personnel/${id}/acquisition/offres`;
   //data fetching stuff
-  const{ data, isLoading, isError, error}=useQuery('detail_offre', ()=>fetchOffre(idOffre));
+  const{ data, isLoading, isError, error}=useQuery('detail_offre'+idOffre, ()=>fetchOffre(idOffre));
 
   if(isLoading) return(<Loading/>);
   if(isError) return(<Erreur/>);

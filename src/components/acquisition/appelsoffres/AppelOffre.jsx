@@ -36,7 +36,7 @@ const AppelOffre = (props) => {
   const{UpdatePortal, isUpdateModalOpen,openUpdateModal,closeUpdateModal}=useUpdateModal();
 
   return (
-    <div  className="flex flex-col border-2 h-fit w-full bg-zinc-200 shadow-lg  p-3 rounded">
+    <div  className="flex flex-col border-2 h-fit w-full bg-zinc-200 shadow-lg  px-3 rounded">
       {/* En-tête */}
       <div className="flex justify-between">
         <div className="flex flex-col">
@@ -112,7 +112,7 @@ const AppelOffre = (props) => {
           {appelOffre.objet}
         </div>
         {/* control */}
-        <div className="flex flex-col justify-end space-5">
+        <div className="flex flex-col justify-end space-2">
           <LinkButton settings={{to:PARENTURL + `/${appelOffre.id}`, color:"bg-zinc-800", text:"Détails"}}/>
         </div>
       </div>

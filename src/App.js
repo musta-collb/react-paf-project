@@ -30,6 +30,8 @@ import GestionAffectations from "./pages/GestionAffectations.jsx"
 import ListAffectations from "./components/affectation/ListAffectations.jsx";
 import CreationAffectation from "./components/affectation/CreationAffectation.jsx";
 import DetailsAffectation from "./components/affectation/DetailsAffectation.jsx";
+//Gestion Rebut imports
+import GestionRebut from "./pages/GestionRebut.jsx";
 
 
 const queryClient=new QueryClient();
@@ -83,6 +85,9 @@ function App() {
               <Route path="" element={<ListAffectations/>}/>
               <Route path=":idAffectation" element={<DetailsAffectation/>}/>
               <Route path="creation" element={<CreationAffectation/>}/>
+            </Route>
+            {/* Gestion rebut */}
+            <Route path="rebut" element={<GestionRebut/>}>
             </Route>
           </Route>
         </Route>

@@ -26,7 +26,7 @@ import DetailsTicket from "./components/ticket/DetailsTicket.jsx"
 import ListTickets from "./components/ticket/ListTickets.jsx"
 import GestionTickets from "./pages/GestionTickets.jsx"
 //Gestion Affectation imports
-import GestionAffectations from "./pages/GestionAffectaions.jsx"
+import GestionAffectations from "./pages/GestionAffectations.jsx"
 import ListAffectations from "./components/affectation/ListAffectations.jsx";
 import CreationAffectation from "./components/affectation/CreationAffectation.jsx";
 import DetailsAffectation from "./components/affectation/DetailsAffectation.jsx";

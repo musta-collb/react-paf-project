@@ -1,4 +1,52 @@
-{ "tickets":[
+{ 
+  "affectations":[
+    {
+      "id":1,
+      "date":"12-23-2017",
+      "details":"djfjsdfjd",
+      "duree":"indeterminée",
+      "exploiteur":{
+        "description":"description",
+        "type":"type"
+      },
+      "articles":[
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"}
+      ]
+    },
+    {
+      "id":1,
+      "date":"12-23-2017",
+      "details":"djfjsdfjd",
+      "duree":"indeterminée",
+      "exploiteur":{
+        "description":"description",
+        "type":"type"
+      },
+      "articles":[
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"}
+      ]
+    },
+    {
+      "id":1,
+      "date":"12-23-2017",
+      "details":"djfjsdfjd",
+      "duree":"indeterminée",
+      "exploiteur":{
+        "description":"description",
+        "type":"type"
+      },
+      "articles":[
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"},
+        {"designation":"dslkfkdfs"}
+      ]
+    }
+  ],
+  "tickets":[
   {
     "id":2,
     "etat":"OUVERT",

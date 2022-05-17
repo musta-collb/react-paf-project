@@ -28,8 +28,6 @@ const LoginPersonnel = () => {
   } = useForm();
   //handle login 
   const onSubmit = async(data) => {
-
-      
         try{
           console.log("loging ...")
           await login(data.email, data.password);

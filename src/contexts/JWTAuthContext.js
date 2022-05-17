@@ -84,11 +84,12 @@ export const AuthProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     const login = async (email, password) => {
+        console.log("Cool!!!!!!")
         const response = await axios.post('/api/auth/login', {
             email,
             password,
         })
-        console.log(response.data)
+        console.log("voilà le user", response.data)
         const { accessToken, user } = response.data
 
         setSession(accessToken)

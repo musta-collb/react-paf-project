@@ -30,6 +30,7 @@ const LoginPersonnel = () => {
         try{
           console.log("loging ...")
           await login(data.email, data.password);
+          console.log("done logging")
           navigate('/personnel/1/acquisition')
           console.log(user)
         }

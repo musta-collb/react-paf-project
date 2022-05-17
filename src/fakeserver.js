@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 //creating server
 const server = jsonServer.create()
 //create a router
-const router = jsonServer.router('./fakedb.json')
+const router = jsonServer.router('./src/fakedb.json')
 //reading users
 const userdb = JSON.parse(fs.readFileSync('./src/users.json', 'UTF-8'))
 //default middlewares

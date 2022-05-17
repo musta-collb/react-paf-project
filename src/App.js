@@ -8,6 +8,7 @@ import LoginFournisseur from "./pages/connexionFournisseur.jsx";
 import AdminPersonnel from "./pages/admin/adminPersonnel.jsx";
 import EditPersonnel from "./pages/admin/editPersonnel.jsx";
 // Manavana
+import AuthGuard from "./auth/AuthGuard.jsx";
 //GestionAcquiqition Import
 import AppelsOffres from "./components/acquisition/appelsoffres/AppelsOffres.jsx";
 import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAppelOffre.jsx";
@@ -62,7 +63,11 @@ function App() {
         </Route>
 
         <Route path="/personnel/:id">
-          <Route path="" element={<Principale />}>
+          <Route path="" element={
+            <AuthGuard ROLE="EMPLOYEE">
+              <Principale />
+            </AuthGuard>
+          }>
             {/*Gestion Acquisition*/}
             <Route path="acquisition" element={<GestionAcquisition />}>
               <Route path="" element={<TableauDeBordAcquisition/>}/>

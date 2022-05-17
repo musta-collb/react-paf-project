@@ -1,11 +1,12 @@
 import React from "react";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const LoginPersonnel = () => {
   // NavBar links
+  const navigate=useNavigate();
   const myLinks = [
     {
       title: "Roteur",
@@ -21,6 +22,8 @@ const LoginPersonnel = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/personnel/1/acquisition")
+
   };
   return (
     <div className="min-h-full mb-0">

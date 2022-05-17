@@ -1,7 +1,7 @@
-//import useAuth from "../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 const Login = () => {
-    //const {onLogin}=useAuth();
-    const onLogin=()=>{console.log("connected")};
+    const {login}=useAuth();
+    //const onLogin=()=>{console.log("connected")};
     return ( 
         <div className="w-screen h-screen flex justify-center items-center bg-login-bg">
             <div className="bg-white rounded-lg w-1/3 h-fit flex flex-col p-4 drop-shadow-lg">
@@ -15,7 +15,7 @@ const Login = () => {
                 </div>
                 <div className="flex flex-col p-1">
                     <button 
-                    onClick={onLogin}
+                    onClick={login}
                     className="p-1 m-1 bg-zinc-900 text-slate-100 rounded drop-shadow-1"
                     >Se connecter</button>
                 </div>

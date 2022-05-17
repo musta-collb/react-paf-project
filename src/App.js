@@ -77,9 +77,9 @@ function App() {
 
           <Route path="/personnel" >
             <Route path=":id" element={ 
-              <AuthGuard ROLE="ACQUISITION">
+               <AuthGuard ROLE="ACQUISITION">
                 <Principale />
-              </AuthGuard>
+               </AuthGuard>
             }>
               <Route path="acquisition" element={<GestionAcquisition />}>
                 {/* <Route path="" element={<TableauDeBordAcquisition/>}/> */}

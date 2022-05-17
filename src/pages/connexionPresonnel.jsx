@@ -28,12 +28,12 @@ const LoginPersonnel = () => {
   } = useForm();
   //handle login 
   const onSubmit = async(data) => {
+
       
         try{
           console.log("loging ...")
           await login(data.email, data.password);
-          navigate('/personnel/login/personnel/1/acquisition')
-          //window.location.reload();
+          navigate('/personnel/1/acquisition')
           console.log(user)
         }
         catch(e){

@@ -7,9 +7,8 @@ import useAuth from "../../hooks/useAuth";
 const Principale = () => {
   const { id } = useParams();
   const { user, isAuthenticated } = useAuth();
-  console.log(user)
   const getUserLinks=(user)=>{
-    let links=[
+    var links=[
       {
         title:"Se deconnecter",
         destination:"/",
@@ -17,32 +16,35 @@ const Principale = () => {
       }
     ];
     user.roles.forEach((role)=>{
-      let title;
-      let destination;
       switch(role){
         case 'ACQUISITION':
-            title="Acquisition";
-            destination=`/personnel/${id}/acquisition`;
+            links.push({
+              title:"Acquisition",
+              destination:`/personnel/${id}/acquisition`,
+              active:true
+            });
             break;
         case 'AFFECTATION':
-            title="Affectation";
-            destination=`/personnel/${id}/affectation`;
+            links.push({
+              title:"Affectation",
+              destination:`/personnel/${id}/affectation`,
+              active:true
+            });
             break;
         case 'RECLAMATION':
-            title="Réclamation";
-            destination=`/personnel/${id}/reclamation`;
+            links.push({
+              title:"Réclamation",
+              destination:`/personnel/${id}/reclamation`,
+              active:true
+            });
             break;
         default:
           break;
       }
-      links.push({
-          title,
-          destination,
-          active:true
-      });
     });
-    return links
+    return links;
   }
+
   const myLinks=getUserLinks(user);
   return (
     <div className="w-full ">

@@ -9,6 +9,7 @@ import AdminPersonnel from "./pages/admin/adminPersonnel.jsx";
 import EditPersonnel from "./pages/admin/editPersonnel.jsx";
 // Manavana
 import AuthGuard from "./auth/AuthGuard.jsx";
+import AuthProvider from "./contexts/JWTAuthContext.js"
 //GestionAcquiqition Import
 import AppelsOffres from "./components/acquisition/appelsoffres/AppelsOffres.jsx";
 import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAppelOffre.jsx";
@@ -39,6 +40,7 @@ const queryClient=new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <AuthProvider>
       <Routes>
         <Route path="/" element={<Index />}></Route>
 
@@ -98,7 +100,8 @@ function App() {
         </Route>
         {/* Manavana */}
       </Routes>
-    </QueryClientProvider>
+    </AuthProvider>
+  </QueryClientProvider>
   );
 }
 

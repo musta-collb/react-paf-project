@@ -10,7 +10,8 @@ import useAuth from "../hooks/useAuth.js";
 const LoginPersonnel = () => {
   const navigate=useNavigate();
   //Gets user status
-  const{login, user, isAuthenticated}=useAuth();
+  const{login, user}=useAuth();
+  console.log("la fonction login",login)
   // NavBar links
   const myLinks = [
     {

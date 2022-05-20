@@ -43,9 +43,33 @@ function createToken(payload){
     }
     const index=userdb.users.findIndex(user => user.email === email && user.password === password)
     const user=userdb.users[index];
-    const accessToken= createToken({email, password})
+    const accessToken= createToken({email, password, userId:index })
     res.status(200).json({accessToken, user})
   })
+  //Verify token validity
+  server.get('/api/auth/profile', (req, res) => {
+    const authorization=req.headers.authorization;
+
+    if (!authorization) {
+      console.log("Auth",authorization)
+      const status = 401
+      const message = 'Invalid authorization token no token'
+      res.status(status).json({status, message})
+      return
+    }
+    const accessToken = authorization.split(' ')[1]
+    const { userId }=verifyToken(accessToken)
+    const user=userdb.users[userId];
+
+    if(!user){
+      const status = 401
+      const message = 'Invalid authorization token no user'+userId+authorization
+      res.status(status).json({status, message})
+      return
+    }
+    res.status(200).json({user})
+  })
+
 //authorisation
   server.use(/^(?!\/auth).*$/,  (req, res, next) => {
     if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
@@ -63,7 +87,7 @@ function createToken(payload){
       res.status(status).json({status, message})
     }
   })
-  //mout json server
+  //mount json server
 server.use(router)
 
 server.listen(5500, () => {

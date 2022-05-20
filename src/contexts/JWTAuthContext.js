@@ -2,10 +2,11 @@ import React, { createContext, useEffect, useReducer } from 'react'
 import jwtDecode from 'jwt-decode'
 import axios from '../axios.js'
 import Loading from '../components/acquisition/Loading.jsx'
+import useAuth from '../hooks/useAuth.js'
 
 const initialState = {
     isAuthenticated: false,
-    isInitialised: true,
+    isInitialised: false,
     user:null,
 }
 
@@ -84,23 +85,20 @@ export const AuthProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     const login = async (email, password) => {
-        console.log("Cool!!!!!!")
         const response = await axios.post('/api/auth/login', {
             email,
             password,
         })
-        console.log("voilà le user", response.data)
         const { accessToken, user } = response.data
-
         setSession(accessToken)
-        console.log("dispatching ...")
+        console.log("dispatching")
         dispatch({
             type: 'LOGIN',
             payload: {
                 user,
             },
         })
-        console.log("done dispatching")
+        console.log("done dispatching!")
     }
 
     const register = async (email, username, password) => {
@@ -128,7 +126,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        /*; (async () => {
+        ; (async () => {
             try {
                 const accessToken = window.localStorage.getItem('accessToken')
 
@@ -163,11 +161,11 @@ export const AuthProvider = ({ children }) => {
                     },
                 })
             }
-        })()*/
+        })()
     }, [])
 
     if (!state.isInitialised) {
-        return <Loading />
+        return <div className='w-screen h-screen flex justify-center items-center'><Loading /></div>
     }
 
     return (

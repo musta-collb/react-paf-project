@@ -1,31 +1,25 @@
+import axios from '../../../axios.js'
+
 export const deleteOffre = id=>{
-    return fetch("http://localhost:5500/offres/"+id,{method:"DELETE"})
+    return axios.delete('/offres/'+id)
 }
 export const createOffre = offre=>{
-return fetch("http://localhost:5500/offres",{
-    method:"POST",
-    headers:{"content-type":"application/json"},
-    body:JSON.stringify(offre)
-})
+    return axios.post('offres',offre)
 }
 export const updateOffre = offre=>{
-return fetch("http://localhost:5500/offres/"+offre.id,{
-    method:"PUT",
-    headers:{"content-type":"application/json"},
-    body:JSON.stringify(offre)
-})
+    return axios.put('/offres/'+offre.id,offre)
 }
 export const fetchAllOffres = async()=>{
-const res= await fetch("http://localhost:5500/offres");
-if(!res.ok) {
-    throw new Error("Erreur");
-}
-return res.json();
+    const res= await axios.get('/offres');
+    if(res.statusText!=='OK') {
+        throw new Error("Erreur");
+    }
+    return res.data;
 }
 export const fetchOffre = async(id)=>{
-const res= await fetch("http://localhost:5500/offres/"+id);
-if(!res.ok) {
-    throw new Error("Erreur");
-}
-return res.json();
+    const res= await axios.get('/offres/'+id);
+    if(res.statusText!=='OK') {
+        throw new Error("Erreur");
+    }
+    return res.data;
 }

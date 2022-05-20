@@ -1,31 +1,26 @@
+import axios from '../../../axios.js';
+  
 export const deleteAppelOffre = id=>{
-        return fetch("http://localhost:5500/appelsoffres/"+id,{method:"DELETE"})
-    }
+    return axios.delete('/appeloffres'+id);
+}
 export const createAppelOffre = appelOffre=>{
-    return fetch("http://localhost:5500/appelsoffres",{
-        method:"POST",
-        headers:{"content-type":"application/json"},
-        body:JSON.stringify(appelOffre)
-    })
+    console.log(" la structure de l'ao",appelOffre)
+    return axios.post('/appelsoffres', appelOffre );
 }
 export const updateAppelOffre = appelOffre=>{
-    return fetch("http://localhost:5500/appelsoffres/"+appelOffre.id,{
-        method:"PUT",
-        headers:{"content-type":"application/json"},
-        body:JSON.stringify(appelOffre)
-    })
+    return axios.put('/appelsoffres/'+appelOffre.id,appelOffre);
 }
 export const fetchAllAppelOffre = async()=>{
-    const res= await fetch("http://localhost:5500/appelsoffres");
-    if(!res.ok) {
+    const res=await axios.get('/appelsoffres');
+    if(res.statusText!=='OK'){
         throw new Error("Erreur");
     }
-    return res.json();
+    return res.data;
 }
 export const fetchAppelOffre = async(id)=>{
-    const res= await fetch("http://localhost:5500/appelsoffres/"+id);
-    if(!res.ok) {
+    const res= await axios.get('/appelsoffres/'+id);
+    if(res.statusText!=='OK') {
         throw new Error("Erreur");
     }
-    return res.json();
+    return res.data;
 }

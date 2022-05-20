@@ -5,17 +5,13 @@ const AuthGuard = ({ children , ROLE}) => {
     const { isAuthenticated, user } = useAuth()
     const [previouseRoute, setPreviousRoute] = useState(null)
     const { pathname } = useLocation()
-
-    console.log(user)
-    console.log(ROLE)
     const isUserRoleAuthenticated= user.roles.indexOf(ROLE) != -1;
     let authenticated = isAuthenticated && isUserRoleAuthenticated
 
     useEffect(() => {
         if (previouseRoute !== null) setPreviousRoute(pathname)
     }, [pathname, previouseRoute])
-    console.log(authenticated)
-    console.log(isAuthenticated)
+    
     if (authenticated) return <>{children}</>
     else {
         return (

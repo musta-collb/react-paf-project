@@ -1,14 +1,15 @@
+import axios from '../../axios.js'
 export const fetchAllAffectation = async()=>{
-    const res= await fetch("http://localhost:5500/affectations");
-    if(!res.ok) {
+    const res= await axios.get('/affectations');
+    if(res.statusText!=='OK') {
         throw new Error("Erreur");
     }
-    return res.json();
+    return res.data;
 }
 export const fetchAffectation = async(id)=>{
-    const res= await fetch("http://localhost:5500/affectations/"+id);
-    if(!res.ok) {
+    const res= await axios.get('/affectations/'+id);
+    if(res.statusText!=='OK') {
         throw new Error("Erreur");
     }
-    return res.json();
+    return res.data;
 }

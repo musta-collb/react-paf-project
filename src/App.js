@@ -9,7 +9,8 @@ import AdminPersonnel from "./pages/admin/adminPersonnel.jsx";
 import EditPersonnel from "./pages/admin/editPersonnel.jsx";
 // Manavana
 import AuthGuard from "./auth/AuthGuard.jsx";
-import AuthProvider from "./contexts/JWTAuthContext.js"
+import { AuthProvider } from "./contexts/JWTAuthContext.js"
+import { QueryClientProvider,QueryClient } from "react-query";
 //GestionAcquiqition Import
 import AppelsOffres from "./components/acquisition/appelsoffres/AppelsOffres.jsx";
 import CreationAppelOffre from "./components/acquisition/appelsoffres/CreationAppelOffre.jsx";
@@ -18,7 +19,6 @@ import GestionAcquisition from "./pages/GestionAcquisition.jsx";
 import Principale from "./pages/Personnel/principale.jsx";
 import Offres from "./components/acquisition/offres/Offres.jsx";
 import Marche from "./components/acquisition/marches/Marche.jsx";
-import { QueryClientProvider,QueryClient } from "react-query";
 import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseur.jsx";
 import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
 import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
@@ -34,13 +34,16 @@ import CreationAffectation from "./components/affectation/CreationAffectation.js
 import DetailsAffectation from "./components/affectation/DetailsAffectation.jsx";
 //Gestion Rebut imports
 import GestionRebut from "./pages/GestionRebut.jsx";
+import Acheteurs from "./components/rebut/Acheteurs.jsx";
+import ListRebuts from "./components/rebut/ListRebuts.jsx";
+import CreationRebut from "./components/rebut/CreationRebut.jsx";
 
 
 const queryClient=new QueryClient();
 function App() {
   return (
+  <AuthProvider>
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
       <Routes>
         <Route path="/" element={<Index />}></Route>
 
@@ -65,13 +68,13 @@ function App() {
         </Route>
 
         <Route path="/personnel/:id">
-          <Route path="" element={
-            <AuthGuard ROLE="ACQUISITION">
-              <Principale />
-            </AuthGuard>
-          }>
+          <Route path="" element={<Principale />}>
             {/*Gestion Acquisition*/}
-            <Route path="acquisition" element={<GestionAcquisition />}>
+            <Route path="acquisition" element={
+            <AuthGuard ROLE="ACQUISITION">
+              <GestionAcquisition />
+            </AuthGuard>
+              }>
               <Route path="" element={<TableauDeBordAcquisition/>}/>
               <Route path="appelsoffres" element={<AppelsOffres />}/>
               <Route path="appelsoffres/:idAppel" element={<DetailAppelOffre />}/> 
@@ -83,25 +86,40 @@ function App() {
               <Route path="fournisseurs" element={<Fournisseurs />} />
             </Route>
             {/*gestion ticket*/}
-            <Route path="ticket_reclamation" element={<GestionTickets/>}>
+            <Route path="ticket_reclamation" element={
+            <AuthGuard ROLE="RECLAMATION">
+              <GestionTickets/>
+            </AuthGuard>
+            }>
               <Route path="" element={<ListTickets/>}/>
               <Route path=":idTicket" element={<DetailsTicket/>}/>
             </Route>
             {/*Gestion affectation*/}
-            <Route path="affectation" element={<GestionAffectations/>}>
+            <Route path="affectation" element={
+            <AuthGuard ROLE="AFFECTATION"> 
+              <GestionAffectations/>
+            </AuthGuard>
+            }>
               <Route path="" element={<ListAffectations/>}/>
               <Route path=":idAffectation" element={<DetailsAffectation/>}/>
               <Route path="creation" element={<CreationAffectation/>}/>
             </Route>
             {/* Gestion rebut */}
-            <Route path="rebut" element={<GestionRebut/>}>
+            <Route path="rebut" element={
+            <AuthGuard ROLE="REBUT">
+              <GestionRebut/>
+            </AuthGuard>
+            }>
+              <Route path="" element={<ListRebuts/>}/>
+              <Route path="creation_rebut" element={<CreationRebut/>}/>
+              <Route path="acheteurs" element={<Acheteurs/>}/>
             </Route>
           </Route>
         </Route>
         {/* Manavana */}
       </Routes>
-    </AuthProvider>
-  </QueryClientProvider>
+    </QueryClientProvider>
+  </AuthProvider>
   );
 }
 

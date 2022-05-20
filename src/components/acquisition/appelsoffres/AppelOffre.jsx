@@ -21,9 +21,9 @@ const AppelOffre = (props) => {
       closeDeleteModal:closePortal
     }
   }
-  //For updates
   const{DeletionPortal, isDeleteModalOpen,openDeleteModal,closeDeleteModal}=useDeleteModal();
-
+  
+  //For updates
   const useUpdateModal=()=>{
     const{Portal, isOpen, openPortal, closePortal }=usePortal();
     return{
@@ -40,12 +40,12 @@ const AppelOffre = (props) => {
       {/* En-tête */}
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <h1>
+          <h1 className="text-gray-700">
             <span className="font-semibold text-sm">Reference :</span>{" "}
             {appelOffre.reference}
           </h1>
-          <span>
-            <span className="font-semibold text-sm">date</span>: {appelOffre.date}
+          <span className="text-gray-700">
+            <span className="font-semibold text-sm">date</span>: {appelOffre.dateLimite}
           </span>
         </div>
         <div className="flex justify-between space-x-5 items-center">
@@ -107,7 +107,7 @@ const AppelOffre = (props) => {
       {/* corps */}
       <div className="flex justify-between">
         {/* body */}
-        <div className="">
+        <div className="text-gray-500">
           <span className="font-bold text-sm">objet: </span>
           {appelOffre.objet}
         </div>

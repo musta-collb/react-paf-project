@@ -6,9 +6,10 @@
         "email": "bruno@email.com",
         "password": "bruno",
         "roles":[
-            "EMPLOYEE",
             "ACQUISITION",
-            "AFFECTATION"
+            "EMPLOYEE",
+            "AFFECTATION",
+            "RECLAMATION"
         ]
       },
       {
@@ -17,7 +18,21 @@
         "email": "nilson@email.com",
         "password": "nilson",
         "roles":[
-            "RECLAMATION"
+            "RECLAMATION",
+            "EMPLOYEE"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pierroldin",
+        "email": "remagnavana@gmail.com",
+        "password": "bodin",
+        "roles":[
+          "ACQUISITION",
+          "EMPLOYEE",
+          "AFFECTATION",
+          "RECLAMATION",
+          "REBUT"
         ]
       }
     ]

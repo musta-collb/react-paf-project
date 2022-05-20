@@ -17,15 +17,19 @@ const ModificationAppelOffre = ({idAppel}) => {
         control,
         name:'biens'
     });
+
     const{errors}=formState;
+    
     const onSubmit=async (form_data)=>{
         await mutation.mutate(form_data);
     }
+
     useEffect(()=>{
         if(data){
             reset(data);
         }
     },[data]);
+
     if(isLoading) 
     return (
         <Loading/>
@@ -36,8 +40,8 @@ const ModificationAppelOffre = ({idAppel}) => {
         return (<Erreur/>);
     } 
     return ( 
-        <div className="flex flex-col overflow-y-auto   p-[2em] scrollbar">
-            <div className="">
+        <div className="flex flex-col overflow-y-auto   px-[2em] scrollbar">
+            <div className="bg-white p-4">
             <form action="" className="flex flex-col space-y-2" onSubmit={handleSubmit(onSubmit)}>
                 {/*Information générale */}
                 <div className="flex flex-col py-2 space-y-2 shadow-lg border-[1px] rounded-lg p-[2em]">   

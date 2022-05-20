@@ -6,10 +6,23 @@ import { fetchTicket } from "./apiCall";
 import Intervention from "./Intervention";
 import Commentaire from "./Commentaire";
 import SimpleButton from "../acquisition/SimpleButton.jsx";
+import usePortal from "react-useportal";
+import CommentModal from "./CommentModal";
 const DetailsTicket=()=>{
     const {idTicket}=useParams();
     console.log(idTicket)
     const{isLoading, isError, data, error,status}=useQuery(`ticket_${idTicket}`,()=>fetchTicket(idTicket));
+    //For comments
+    const useCommentModal=()=>{
+        const{Portal, isOpen, openPortal, closePortal }=usePortal();
+        return{
+          CommentPortal:Portal,
+          isCommentModalOpen:isOpen,
+          openCommentModal:openPortal,
+          closeCommentModal:closePortal
+        }
+      }
+      const{CommentPortal, isCommentModalOpen,openCommentModal,closeCommentModal}=useCommentModal();
 
   if(isLoading) 
   return (
@@ -43,7 +56,7 @@ const DetailsTicket=()=>{
                 <div className="flex flex-row mx-[1em] space-x-2">
                     <div className="flex flex-col w-full p-4 shadow-lg">
                         <p className="font-bold drop-shadow">Commentaires</p>
-                        <div className="flex flex-col w-full h-2/3 mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">
+                        <div className="flex flex-col w-full h-1/3 mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">
 
                             {
                             data.commentaires.map(commentaire=>(
@@ -52,8 +65,13 @@ const DetailsTicket=()=>{
                             }
                             </div>
                             <div className="flex justify-start">
-                            <SimpleButton settings={{color:"bg-zinc-800", text:"Commenter", action:()=>{}}}/>
+                            <SimpleButton settings={{color:"bg-zinc-800", text:"Commenter", action:openCommentModal}}/>
                             </div>
+                            {isCommentModalOpen&&
+                                <CommentPortal>
+                                    <CommentModal context={{ticket:data, closeCommentModal}}/>
+                                </CommentPortal>
+                            }
                     </div>
                     <div className="flex flex-col w-full p-4 shadow-lg">
                         <p className="font-bold">Interventions</p>

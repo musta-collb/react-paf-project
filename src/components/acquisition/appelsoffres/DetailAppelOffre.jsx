@@ -5,8 +5,7 @@ import { fetchAppelOffre } from "./apiCall";
 
 const DetailAppelOffre = () => {
   //route related stuff
-  const { idAppel } = useParams();
-  const { id } = useParams();
+  const { idAppel , id } = useParams();
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
   //data fetching stuff
   const{ data, isLoading, isError, error}=useQuery('detail_appel_offre', ()=>fetchAppelOffre(idAppel));
@@ -33,7 +32,7 @@ const DetailAppelOffre = () => {
         </div>
         <div className="flex space-x-2 ">
           <span className="font-semibold text-zinc-600">Date:</span>
-          <span className="">{data.date}</span>
+          <span className="">{data.dateLimite}</span>
         </div>
         <div className="flex space-x-2">
           <span className="font-semibold text-zinc-600">Budget:</span>

@@ -22,11 +22,11 @@ const Offres = () => {
   return (
     <div  className="flex flex-col grow space-y-2">
       {/* en-tête */}
-      <div className="flex  flex-col flex-none drop shadow-lg px-4  pt-1 pb-2">
+      <div className="flex  flex-col flex-none drop shadow-lg px-4  pt-2 pb-2">
         <h1 className=" font-bold text-2xl text-zinc-600">
           Les offres
         </h1>
-        <div className="flex flex-col md:flex-row space-y-2 justify-between p-2 items-center float-right">
+        <div className="flex flex-col md:flex-row space-y-2 justify-end p-2 items-center float-right">
           <button className="flex space-x-2 items-center bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"

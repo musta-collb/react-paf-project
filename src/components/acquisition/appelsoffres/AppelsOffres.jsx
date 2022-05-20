@@ -25,7 +25,7 @@ const AppelsOffres = () => {
         <h1 className=" font-bold text-2xl text-zinc-600">
           Les appels d'offres
         </h1>
-        <div className="flex flex-col md:flex-row space-y-2 justify-between p-2 items-center float-right">
+        <div className="flex flex-col md:flex-row space-y-2 justify-end p-2 items-center float-right">
           <button className="flex space-x-2 items-center bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const AppelsOffres = () => {
         </div>
       </div>
       {/* Les appels d'offres */}
-      <div className="p-3  flex flex-col flex-auto space-y-2 overflow-y-auto h-screen scrollbar ">
+      <div className="p-3  flex flex-col flex-auto space-y-4 overflow-y-auto h-screen scrollbar ">
         {data.map((ao) => (
           <AppelOffre appelOffre={ao} />
         ))}

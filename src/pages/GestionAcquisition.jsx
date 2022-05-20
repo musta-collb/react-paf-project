@@ -1,5 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
-import AppelsOffres from "../components/acquisition/appelsoffres/AppelsOffres";
+import ProfileSection from "../components/ProfileSection.jsx"
 // import Header from "../components/acquisition/Header";
 import SideBar from "../components/acquisition/SideBar";
 // import SideBarBeta from "../components/acquisition/sideBarBeta";
@@ -32,7 +32,9 @@ const GestionAcquisition = () => {
         <SideBar links={myLinks} />
         {/* content */}
         <Outlet />
-        <div className="w-1/6 bd-zinc-400"></div>
+        <div className="w-1/6 bg-gray-100 flex flex-none">
+          <ProfileSection/>
+        </div>
       </div>
     </div>
   );

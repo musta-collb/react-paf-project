@@ -1,16 +1,18 @@
 import React, { PureComponent, useEffect, useState } from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { Navigate, Outlet, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/footer";
 import NavBar from "../../components/navBar";
 import useAuth from "../../hooks/useAuth";
 
 const Principale = () => {
   const { id } = useParams();
-  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const { user } = useAuth();
   const getUserLinks=(user)=>{
+    if(user==null) navigate('/personnel/login')
     var links=[
       {
-        title:"Se deconnecter",
+        title:"Accueil",
         destination:"/",
         active:true
       }
@@ -34,7 +36,14 @@ const Principale = () => {
         case 'RECLAMATION':
             links.push({
               title:"Réclamation",
-              destination:`/personnel/${id}/reclamation`,
+              destination:`/personnel/${id}/ticket_reclamation`,
+              active:true
+            });
+            break;
+        case 'REBUT':
+            links.push({
+              title:"Rébut",
+              destination:`/personnel/${id}/rebut`,
               active:true
             });
             break;

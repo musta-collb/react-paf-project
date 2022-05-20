@@ -49,7 +49,7 @@ export default function CreationAppelOffre() {
                 <label htmlFor="reference" className="text-zinc-500">description</label>
                 <span className="text-sm text-red-700">{errors.description?.message}</span>
                 <textarea 
-                className="outline:none rounded-lg h-32 w- border-zinc-300"
+                className="outline:none rounded-lg h-32 w-full border-zinc-300"
                 {...register("description",{required:"La description est obligatoire"})}
                 />
                 <label htmlFor="reference" className="text-zinc-500">Date limite réponse</label>

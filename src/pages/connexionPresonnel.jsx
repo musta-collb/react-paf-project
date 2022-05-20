@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +12,6 @@ const LoginPersonnel = () => {
   const navigate=useNavigate();
   //Gets user status
   const{login, user}=useAuth();
-  console.log("la fonction login",login)
   // NavBar links
   const myLinks = [
     {
@@ -29,11 +29,28 @@ const LoginPersonnel = () => {
   //handle login 
   const onSubmit = async(data) => {
         try{
-          console.log("loging ...")
+          console.log("loging in ...",user)
           await login(data.email, data.password);
-          console.log("done logging")
-          navigate('/personnel/1/acquisition')
-          console.log(user)
+          console.log("done logging", user)
+          switch(user.roles[0]){
+            case 'ACQUISITION':
+              navigate(`/personnel/${user.id}/acquisition`);
+              break;
+            case 'AFFECTATION':
+              navigate(`/personnel/${user.id}/affectation`);
+              break;
+            case 'RECLAMATION':
+              navigate(`/personnel/${user.id}/ticket_reclamation`);
+              break;
+            case 'REBUT':
+              navigate(`/personnel/${user.id}/rebut`);
+              break;
+            default:
+              alert("Vous n'avez accès à rien!")
+              break;
+          }
+          
+          console.log("L'utilisateur",user)
         }
         catch(e){
           console.log(e)

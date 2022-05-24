@@ -22,52 +22,54 @@ const DetailAppelOffre = () => {
   return (
     <div className="flex flex-col grow space-y-2 p-[2em] overflow-y-auto">
       <div className="">
-        <span className="text-lg font-bold">Informations générales</span>
+        <span className="text-lg font-bold  text-gray-600 ">Informations générales</span>
       </div>
       {/* info général */}
-      <div className="flex flex-col border-[1px] space-2 px-[2em] py-2">
-        <div className="flex space-x-2">
-          <span className="font-semibold text-zinc-600">Reference:</span>
-          <span className="">{data.reference}</span>
+      <div className="flex flex-col border-[1px] space-2 rounded">
+        <div className="flex bg-gray-200 rounded-t">
+          <div className="flex space-x-2 w-full mx-4 my-2">
+            <span className="font-semibold text-zinc-600">Reference:</span>
+            <span className="text-gray-700">{data.reference}</span>
+          </div>
+          <div className="flex space-x-2 w-full mx-4 my-2">
+            <span className="font-semibold text-zinc-600">Date:</span>
+            <span className="text-gray-700">{data.dateLimite}</span>
+          </div>
         </div>
-        <div className="flex space-x-2 ">
-          <span className="font-semibold text-zinc-600">Date:</span>
-          <span className="">{data.dateLimite}</span>
-        </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 mx-4">
           <span className="font-semibold text-zinc-600">Budget:</span>
           <span className="">{data.budget}</span>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 mx-4">
           <span className="font-semibold text-zinc-600">Objet:</span>
-          <span className="">{data.objet}</span>
+          <span className="text-gray-700">{data.objet}</span>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 mx-4">
           <span className="font-semibold text-zinc-600">
             Date limite reponse:
           </span>
-          <span className="">{data.dateLimite}</span>
+          <span className="text-gray-700">{data.dateLimite}</span>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 mx-4 mb-2">
           <span className="font-semibold text-zinc-600">
             Date de livraison au plus tard:
           </span>
-          <span className="">{data.dateLivraison}</span>
+          <span className="text-gray-700">{data.dateLivraison}</span>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex flex-col space-x-2 mx-4 mb-2">
           <span className="font-semibold text-zinc-600">Descriptions:</span>
-          <span className="">{data.description}</span>
+          <span className="text-sm text-gray-700">{data.description}</span>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 mx-4 mb-2 items-center">
           <span className="font-semibold text-zinc-600">
-            Réponses Associés:
+            Réponses Associées:
           </span>
-          <span className="">!!!!il faut mettre le nombre de réponse associé ici</span>
+          <span className="text-gray-700 ">3</span>
         </div>
       </div>
       {/* détails bordereau */}
       <div className="">
-        <span className="text-lg font-bold">Détail des besoins</span>
+        <span className="text-lg font-bold text-gray-600">Détail des besoins</span>
       </div>
       <table className="w-full">
         <tr className="border-b-[1px]  bg-sky-500">

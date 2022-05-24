@@ -54,9 +54,9 @@ const DetailsTicket=()=>{
             <div className="flex flex-col border-t-2">
                 <p className="text-lg text-white font-semibold  bg-blue-600 px-2">Suivi</p>
                 <div className="flex flex-row mx-[1em] space-x-2">
-                    <div className="flex flex-col w-full p-4 shadow-lg">
-                        <p className="font-bold drop-shadow">Commentaires</p>
-                        <div className="flex flex-col w-full h-1/3 mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">
+                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4 ">
+                        <p className="font-bold drop-shadow text-gray-600">Commentaires</p>
+                        <div className="flex flex-col w-full mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">
 
                             {
                             data.commentaires.map(commentaire=>(
@@ -73,8 +73,8 @@ const DetailsTicket=()=>{
                                 </CommentPortal>
                             }
                     </div>
-                    <div className="flex flex-col w-full p-4 shadow-lg">
-                        <p className="font-bold">Interventions</p>
+                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4">
+                        <p className="font-bold text-gray-600">Interventions</p>
                         <div className="flex flex-col w-full mx-[1em] p-2">
 
                             {/* {

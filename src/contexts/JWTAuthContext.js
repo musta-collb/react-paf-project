@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer } from 'react'
+import React, { createContext, useEffect, useReducer , useState} from 'react'
 import jwtDecode from 'jwt-decode'
 import axios from '../axios.js'
 import Loading from '../components/acquisition/Loading.jsx'
@@ -82,7 +82,8 @@ const AuthContext = createContext({
 })
 
 export const AuthProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState)
+    //const [state, dispatch] = useReducer(reducer, initialState)
+    const [state, setState]=useState(initialState)
 
     const login = async (email, password) => {
         const response = await axios.post('/api/auth/login', {
@@ -92,12 +93,14 @@ export const AuthProvider = ({ children }) => {
         const { accessToken, user } = response.data
         setSession(accessToken)
         console.log("dispatching")
-        dispatch({
-            type: 'LOGIN',
-            payload: {
-                user,
-            },
-        })
+        // dispatch({
+        //     type: 'LOGIN',
+        //     payload: {
+        //         user,
+        //     },
+        // })
+        setState({...state, isAuthenticated:true, user});
+        return user;
         console.log("done dispatching!")
     }
 
@@ -111,18 +114,27 @@ export const AuthProvider = ({ children }) => {
         const { accessToken, user } = response.data
 
         setSession(accessToken)
-
-        dispatch({
-            type: 'REGISTER',
-            payload: {
-                user,
-            },
+        setState({
+            ...state,
+            isAuthenticated: true,
+            user,
         })
+        // dispatch({
+        //     type: 'REGISTER',
+        //     payload: {
+        //         user,
+        //     },
+        // })
     }
 
     const logout = () => {
         setSession(null)
-        dispatch({ type: 'LOGOUT' })
+        // dispatch({ type: 'LOGOUT' })
+        setState({
+            ...state,
+            isAuthenticated: false,
+            user: null,
+        })
     }
 
     useEffect(() => {
@@ -135,30 +147,50 @@ export const AuthProvider = ({ children }) => {
                     const response = await axios.get('/api/auth/profile')
                     const { user } = response.data
 
-                    dispatch({
-                        type: 'INIT',
-                        payload: {
-                            isAuthenticated: true,
-                            user,
-                        },
+                    // dispatch({
+                    //     type: 'INIT',
+                    //     payload: {
+                    //         isAuthenticated: true,
+                    //         user,
+                    //     },
+                    // })
+                    setState({
+                        ...state,
+                        isAuthenticated:true,
+                        isInitialised: true,
+                        user,
                     })
                 } else {
-                    dispatch({
-                        type: 'INIT',
-                        payload: {
-                            isAuthenticated: false,
-                            user: null,
-                        },
-                    })
+                    // dispatch({
+                    //     type: 'INIT',
+                    //     payload: {
+                    //         isAuthenticated: false,
+                    //         user: null,
+                    //     },
+                    // })
+                    setState(
+                        {
+                            ...state,
+                            isAuthenticated:false,
+                            isInitialised:true,
+                            user:null,
+                        }
+                    )
                 }
             } catch (err) {
                 console.error(err)
-                dispatch({
-                    type: 'INIT',
-                    payload: {
-                        isAuthenticated: false,
-                        user: null,
-                    },
+                // dispatch({
+                //     type: 'INIT',
+                //     payload: {
+                //         isAuthenticated: false,
+                //         user: null,
+                //     },
+                // })
+                setState({
+                    ...state,
+                    isAuthenticated:false,
+                    isInitialised:true,
+                    user:null,
                 })
             }
         })()

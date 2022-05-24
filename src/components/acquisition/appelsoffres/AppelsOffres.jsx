@@ -4,6 +4,7 @@ import {useQuery} from "react-query";
 import Erreur from "../Erreur";
 import Loading from "../Loading";
 import { fetchAllAppelOffre } from "./apiCall";
+import { useEffect , useState} from "react";
 
 const AppelsOffres = () => {
   const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAllAppelOffre);

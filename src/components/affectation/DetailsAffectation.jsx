@@ -29,7 +29,7 @@ const DetailsAffectation = () => {
             {/*Exploiteur*/}
             <div className="flex flex-col p-4">
                 <div className="flex">
-                    <p className="text-sm">
+                    <p className="text-sm font-semibold">
                         Date:
                     </p>
                     <span className="text-sm px-2">
@@ -51,6 +51,27 @@ const DetailsAffectation = () => {
                     <span className="px-2">
                     {data.duree}
                     </span>
+                </div>
+                <div className="flex flex-col">
+                    <div className="flex">
+                    <p className="font-semibold">
+                        Exploiteur:
+                    </p>
+                    </div>
+                    <div className="flex flex-col mx-4">
+                        <div className="flex">
+                            <p className="">Type:</p>
+                            <span className="mx-2">{data.exploiteur.type}</span>
+                        </div>
+                        <div className="flex">
+                            <p className="">Responsable:</p>
+                            <span className="mx-2">{data.exploiteur.responsable}</span>
+                        </div>
+                        <div className="flex">
+                            <p className="">Description:</p>
+                            <span className="mx-2">{data.exploiteur.description}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             {/*Articles*/}

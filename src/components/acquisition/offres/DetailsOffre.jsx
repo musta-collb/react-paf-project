@@ -16,21 +16,21 @@ const DetailsOffre = () => {
   if(isLoading) return(<Loading/>);
   if(isError) return(<Erreur/>);
     return (
-        <div className="flex flex-col p-[1em] space-y-1 w-full">
-            <h1 className="font-bold text-2xl ">Détails de l'offres</h1>
+        <div className="flex flex-col p-[1em] space-y-2 w-full">
+            <h1 className="font-bold text-2xl text-gray-700 ">Détails de l'offres</h1>
             {/* en-tête */}
-            <div className="flex flex-col px-[1em]">
+            <div className="flex flex-col px-[1em] ">
                 <div className="flex space-x-2">
-                    <p className="text-xs font-medium">Date: </p>
-                    <div className="text-xs">{data.date}</div>
+                    <p className="text-sm font-medium">Date: </p>
+                    <div className="text-sm">{data.date}</div>
                 </div>
-                <div className="flex space-x-2">
-                    <p className="text-xs font-medium">Reference appel d'offre:</p>
-                    <div className="text-xs">{data.reference_ao}</div>
+                <div className="flex space-x-2 mb-2 ">
+                    <p className="text-sm font-medium">Reference appel d'offre:</p>
+                    <div className="text-sm">{data.reference_ao}</div>
                 </div>
             </div>
             {/*Fournisseur */}
-            <div className="flex flex-col rounded shadow-lg bg-white pb-2">
+            <div className="flex flex-col rounded shadow-lg bg-white pb-2 mb-2">
                 <div className="flex font-bold rounded-t text-xl bg-zinc-200 px-[1em]">Fournisseur</div>
                 <div className="flex flex-col px-[1em]">
                     <div className="flex space-x-2 px-[1em]">
@@ -68,7 +68,7 @@ const DetailsOffre = () => {
                 </div>
             </div>
             {/* Détails */}
-            <div className="font-bold text-xl flex px-[1em]">
+            <div className="font-bold text-xl flex px-[1em] text-gray-700 mt-4">
                 Détails de l'offre
             </div>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">

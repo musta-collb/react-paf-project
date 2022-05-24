@@ -12,9 +12,8 @@ const ProfileSection = () => {
         <div className="flex flex-col w-full h-screen">
 
             <div className=" flex  justify-center items-center ">
-                 {/* <img className="rounded-full w-16 h-16 overflow-hidden mt-[1cm] mb-4" src={require("../images/profile.jpg")}/> */}
-                 <div className="flex rounded-full w-16 h-16 overflow-hidden mt-[1cm] mb-4">
-                     <img src={require("../images/profile.jpg")}/>
+                                  <div className="flex  rounded-full w-16 h-16 overflow-hidden mt-[1cm] mb-4">
+                      <img className='object-cover' src={require("../images/profile.jpg")}/> 
                  </div>
             </div>
             <div className="flex flex-col mx-[2em] border-t-2">

@@ -1,46 +1,67 @@
-{ "rebuts":[
-  {
-    "id":"1",
-    "date":"12-23-2017",
-    "description":"vieux équipemement",
-    "articles":[
-      {}
-    ]
-  },
-  {
-    "id":"2",
-    "date":"12-23-2017",
-    "description":"vieux équipemement",
-    "articles":[
-      {}
-    ],
-    "acheteur":{}
-  },
-  {
-    "id":"3",
-    "date":"12-23-2017",
-    "description":"vieux équipemement",
-    "articles":[
-      {}
-    ]
-  },
-  {
-    "id":"3",
-    "date":"12-23-2017",
-    "description":"vieux équipemement",
-    "articles":[
-      {}
-    ]
-  },
-  {
-    "id":"3",
-    "date":"12-23-2017",
-    "description":"vieux équipemement",
-    "articles":[
-      {}
-    ]
-  }
-],
+{
+  "articles": [
+    {
+      "id": 1,
+      "designation": "Banc"
+    },
+    {
+      "id": 2,
+      "etat": "dispo",
+      "designation": "Blouse"
+    },
+    {
+      "id": 3,
+      "etat": "dispo",
+      "designation": "Blouse"
+    },
+    {
+      "id": 24,
+      "designation": "Blouse"
+    }
+  ],
+  "rebuts": [
+    {
+      "id": "1",
+      "date": "12-23-2017",
+      "description": "vieux équipemement",
+      "articles": [
+        {}
+      ]
+    },
+    {
+      "id": "2",
+      "date": "12-23-2017",
+      "description": "vieux équipemement",
+      "articles": [
+        {}
+      ],
+      "acheteur": {}
+    },
+    {
+      "id": "3",
+      "date": "12-23-2017",
+      "description": "vieux équipemement",
+      "articles": [
+        {}
+      ]
+    },
+    {
+      "id": "3",
+      "date": "12-23-2017",
+      "description": "vieux équipemement",
+      "articles": [
+        {}
+      ]
+    },
+    {
+      "id": "3",
+      "date": "12-23-2017",
+      "description": "vieux équipemement",
+      "articles": [
+        {}
+      ]
+    }
+  ],
   "affectations": [
     {
       "id": 2,
@@ -199,6 +220,46 @@
           "date": "23-05-2022",
           "auteur": "Pierroldin",
           "contenu": "khlhjhjhhkhlhjkhhjhl jkkkjhkjjkhjhjkhjhjhjkhkshdjqhs jhdqsjhdqhsdhqshdjshq hsdjqskdhqsjdqjsdjshqshdjqsjdhqsjd hjqshdjqshdjhqsjdhqjhdjqshdj qhsjdhqsjdhsjhd"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "mlkfmlkmdfkgf"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "dflgkfklgdfklgfkgdf"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "dflgdjfgkljfkgf"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "dflgkfgf"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "pkfdgpdfpogifog"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "sdfjdhfjhdsjsdfdfsdfd\nsdfsdfdfsdfs\nsdfsdfsdfs\nsdfsdfdfs\ndfsdfsdfd"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "fgfg\ndfg\ndfg\ndfg\ndfgd\nfgd\nfgd\ng"
+        },
+        {
+          "date": "23-05-2022",
+          "auteur": "nilson",
+          "contenu": "sdf"
         }
       ],
       "interventions": [
@@ -668,12 +729,18 @@
           "quantite": "lsdkjfskldjfd",
           "unite": "sldkfjdkfjd",
           "descriptionBien": "sldkjfkldjfkld"
+        },
+        {
+          "designation": "mkmkk",
+          "quantite": "lkkljkl",
+          "unite": "lklkj",
+          "descriptionBien": "mkmlkl"
         }
       ],
       "reference": "AO_18_05_2022",
       "objet": "Equipement des écoles d'ingnieur au Maroc",
       "budget": "1000000 dh",
-      "description": "sldkjfdfkskdjfksdjfksdkfklsdfkdjkfjskdfjsdf",
+      "description": "Le projet a comme objectif de construire un outil efficace pour gérer un patrimoine (ordinateur, imprimante, matériel informatique, fourniture…) et suivre sans état dans l’entreprise. Ce besoin nous impose de décortiquer notre application en des sous modules.",
       "dateLimite": "2022-04-23",
       "id": 21
     },

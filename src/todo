@@ -1,23 +1,23 @@
-=> Telecharger TD avec correction Reseau mobile.
-=> Telecharger Rapport PFA localement.
-=> Telecharger Top Gun si disponible.
+DONE)=> Telecharger TD avec correction Reseau mobile.
+DONE)=> Telecharger Rapport PFA localement.
+DONE)=> Telecharger Top Gun si disponible.
 
-1. make profile photo not stretched:
-2. Pour les détails:
-   =>Make it prettier.
+DONE)1. make profile photo not stretched:
 
 3. Gestion Affectation:
    =>Création, searchable input for responsible, searchable input for Article.
    => we are talking live search.
 
-4. Pour presque tout.
+4. Pour les détails:
+   =>Make it prettier.
+5. Pour presque tout.
    Make table Editable( rendre les détails editable).
 
-5. Gestion ticket:
+6. Gestion ticket:
    =>Ajout des interventions.
 
-6. Gestion rebut
+7. Gestion rebut
    =>Ajouter creation,
    =>Ajouter les acheteur,
-7. Details Rebut - surtout il faut mentionner le prix
-8. Ajouter la mise à jour après modification
+8. Details Rebut - surtout il faut mentionner le prix
+9. Ajouter la mise à jour après modification

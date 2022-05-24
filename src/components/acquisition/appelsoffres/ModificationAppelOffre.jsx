@@ -1,16 +1,25 @@
 import { useFieldArray, useForm } from "react-hook-form"
 import Erreur from "../Erreur";
 import Loading from "../Loading";
-import { useMutation, useQuery } from "react-query";
+import { useMutation, useQuery , QueryClient } from "react-query";
 import SubmitButton from "../SubmitButton";
 import { updateAppelOffre, fetchAppelOffre } from "./apiCall";
 import { useEffect } from "react";
 import SimpleButton from "../SimpleButton";
 const ModificationAppelOffre = ({idAppel}) => {
+    const queryClient=new QueryClient({});
     //data fetching
     const{ data,isLoading, isError, error}=useQuery('detail_appel_offre_for_update', ()=>fetchAppelOffre(idAppel));
     //mutation
-    const mutation=useMutation(updateAppelOffre)
+    const mutation=useMutation(updateAppelOffre,{
+        onSuccess:async()=>{
+            await queryClient.invalidateQueries('appelsoffres',{
+                exact:true,
+                refetchActive: true,
+                refetchInactive: true
+            },{ throwOnError:true, cancelRefetch:true })
+        }
+    })
     //Form shits
     const{register, handleSubmit, reset, formState, control}=useForm({ mode:'onSubmit'});
     const{fields, append, remove}=useFieldArray({

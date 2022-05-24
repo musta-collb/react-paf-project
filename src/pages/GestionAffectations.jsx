@@ -6,7 +6,7 @@ const GestionAffectations = () => {
             <div className="flex sm:flex-row flex-col grow ">
                 <Outlet />
                 <div className="w-1/6 bg-gray-100 flex flex-none">
-                <ProfileSection/>
+                    <ProfileSection/>
                 </div>
             </div>
         </div>

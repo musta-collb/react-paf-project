@@ -1,10 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
+import { useContext } from "react";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth.js";
+import AuthContext from "../contexts/JWTAuthContext";
 
 
 
@@ -43,6 +44,10 @@ const LoginPersonnel = () => {
             case 'REBUT':
               navigate(`/personnel/${user.id}/rebut`);
               break;
+            case 'STOCK':
+              navigate(`/personnel/${user.id}/stock`);
+              break;
+
             default:
               alert("Vous n'avez accès à rien!")
               break;

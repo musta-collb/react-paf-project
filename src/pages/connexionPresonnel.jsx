@@ -11,7 +11,7 @@ import useAuth from "../hooks/useAuth.js";
 const LoginPersonnel = () => {
   const navigate=useNavigate();
   //Gets user status
-  const{login, user}=useAuth();
+  const{login}=useAuth();
   // NavBar links
   const myLinks = [
     {
@@ -29,9 +29,7 @@ const LoginPersonnel = () => {
   //handle login 
   const onSubmit = async(data) => {
         try{
-          console.log("loging in ...",user)
-          await login(data.email, data.password);
-          console.log("done logging", user)
+          const user=await login(data.email, data.password);
           switch(user.roles[0]){
             case 'ACQUISITION':
               navigate(`/personnel/${user.id}/acquisition`);

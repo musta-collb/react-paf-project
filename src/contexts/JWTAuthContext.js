@@ -91,14 +91,13 @@ export const AuthProvider = ({ children }) => {
         })
         const { accessToken, user } = response.data
         setSession(accessToken)
-        console.log("dispatching")
         dispatch({
             type: 'LOGIN',
             payload: {
                 user,
             },
         })
-        console.log("done dispatching!")
+        return user;
     }
 
     const register = async (email, username, password) => {

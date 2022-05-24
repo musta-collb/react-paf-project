@@ -12,13 +12,13 @@ const ProfileSection = () => {
         <div className="flex flex-col w-full h-screen">
 
             <div className=" flex  justify-center items-center ">
-                                  <div className="flex  rounded-full w-16 h-16 overflow-hidden mt-[1cm] mb-4">
+                <div className="flex  rounded-full w-16 h-16 overflow-hidden mt-[1cm] mb-4">
                       <img className='object-cover' src={require("../images/profile.jpg")}/> 
-                 </div>
+                </div>
             </div>
             <div className="flex flex-col mx-[2em] border-t-2">
                 <p className="text-gray-700">{user.name}</p>
-                <p className="text-gray-700">{user.email}</p>
+                <div className="text-gray-700 text-sm">{user.email}</div>
             </div>
             <div className="flex justify-center">
                 <SimpleButton settings={{text:"Deconnexion", color:"bg-orange-500", action:deconnexion}}/>

@@ -1,8 +1,8 @@
 const TableauDeBordAcquisition = () => {
     return ( 
-        <div className="p-[2em] w-full h-full">
+        <div className="p-[2em] w-full h-screen bg-gray-100">
             <div className="grid grid-cols-3 gap-4">
-                <div className="flex flex-col bg-gray-200 rounded-lg p-2">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
                     <div className="text-xl font-bold">
                         Appels d'offres
                     </div>
@@ -10,7 +10,7 @@ const TableauDeBordAcquisition = () => {
                         123
                     </div>
                 </div>
-                <div className="flex flex-col bg-gray-200 rounded-lg p-2">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
                     <div className="text-xl font-bold">
                         Offres
                     </div>
@@ -18,7 +18,7 @@ const TableauDeBordAcquisition = () => {
                         34
                     </div>
                 </div>
-                <div className="flex flex-col bg-gray-200 rounded-lg p-2">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
                     <div className="text-xl font-bold">
                         Marché
                     </div>
@@ -26,7 +26,7 @@ const TableauDeBordAcquisition = () => {
                         574
                     </div>
                 </div>
-                <div className="flex flex-col bg-gray-200 rounded-lg p-2">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
                     <div className="text-xl font-bold">
                         Fournisseurs
                     </div>

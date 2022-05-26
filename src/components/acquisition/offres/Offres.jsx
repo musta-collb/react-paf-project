@@ -52,7 +52,7 @@ const Offres = () => {
         </div>
       </div>
       {/* Les offres d'offres */}
-      <div className="p-3  flex flex-col flex-auto space-y-2 h-screen overflow-y-auto scrollbar ">
+      <div className="p-3  flex flex-col bg-gray-100 flex-auto space-y-2 h-screen overflow-y-auto scrollbar ">
         {data.map((o) => (
            <Offre offre={o}/>
         ))}

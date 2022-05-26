@@ -16,7 +16,7 @@ const ProfileSection = () => {
                       <img className='object-cover' src={require("../images/profile.jpg")}/> 
                 </div>
             </div>
-            <div className="flex flex-col mx-[2em] border-t-2">
+            <div className="flex flex-col mx-[2em] border-t-2 border-t-gray-300">
                 <p className="text-gray-700">{user.name}</p>
                 <div className="text-gray-700 text-sm">{user.email}</div>
             </div>

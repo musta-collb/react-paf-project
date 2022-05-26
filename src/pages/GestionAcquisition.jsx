@@ -18,7 +18,7 @@ const GestionAcquisition = () => {
     },
     {
       title: "Marché",
-      destination: `/personnel/${id}/acquisition/marche`,
+      destination: `/personnel/${id}/acquisition/marches`,
     },
     {
       title: "Fournisseurs",
@@ -32,7 +32,7 @@ const GestionAcquisition = () => {
         <SideBar links={myLinks} />
         {/* content */}
         <Outlet />
-        <div className="w-1/6 bg-gray-100 flex flex-none">
+        <div className="w-1/6 bg-gray-200 flex flex-none">
           <ProfileSection/>
         </div>
       </div>

@@ -21,11 +21,11 @@ const CreationOffre = () => {
         console.log(data)
     }
     return ( 
-        <div className="w-full flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em]">
+        <div className="w-full flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em] bg-gray-100">
             <h1 className="py-3 text-2xl font-bold">Enregistrement d'un offre</h1>
             <form className="flex flex-col space-y-2" onSubmit={handleSubmit(onSubmit)}>
                 {/* Référence à l'appel d'offre */}
-                <div className="flex flex-col  shadow-lg border-[1px] rounded-lg p-[2em] ">
+                <div className="flex flex-col  shadow-lg border-[1px] rounded-lg p-[2em] bg-white ">
                     <div class="mb-6">
                         <label for="reference_ao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Réference Appel d'offre</label>
                         <input 
@@ -44,7 +44,7 @@ const CreationOffre = () => {
                     </div>
                 </div>
                 {/* Le fournisseur */}
-                <div className="flex flex-col shadow-lg space-y-6 rounded-lg m-[1em] p-[2em]">
+                <div className="flex flex-col shadow-lg space-y-6 rounded-lg  p-[2em] bg-white">
                 <div className="text-xl font-bold p-1">Coordonnée du fournisseur</div>
                 <div class="relative z-0 w-full mb-6 group">
                     <input 
@@ -125,10 +125,10 @@ const CreationOffre = () => {
                 </div>
                 </div>
                 {/* les biens */}
-                <div className="flex flex-col py-2 space-y-2 shadow-lg border-[1px] rounded-lg p-[2em]">
+                <div className="flex flex-col py-2 space-y-2 shadow-lg border-[1px] rounded-lg p-[2em] bg-white">
                 <div className="flex text-md font-bold">Détails des biens</div>
                 {fields.map((field,index)=>
-                    <div className="flex flex-col rounded border-[2px] p-[1em]">
+                    <div className="flex flex-col rounded border-[2px] p-[1em] bg-gray-100">
                     <div className="flex justify-between items-center">
                         <span className="text-zinc-600 font-bold ">{index+1}</span>
                         <svg onClick={()=>remove(index)} 

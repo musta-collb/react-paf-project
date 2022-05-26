@@ -23,7 +23,7 @@ const CreationAffectation = () => {
                 <div className="flex">
                     <p className="font-bold text-xl">Nouvel affectation:</p>
                 </div>
-                <div className="flex space-x-4 w-full">
+                <div className="flex flex-col md:flex-row md:space-x-4 w-full">
                     <div className="flex flex-col space-y-2 w-full">
                         <label className="text-gray-700 font-semibold">Type Exploiteur:</label>
                         <select className="rounded border-gray-400 ">

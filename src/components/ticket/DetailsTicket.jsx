@@ -34,13 +34,13 @@ const DetailsTicket=()=>{
     if(isError){
         console.log(error)
         return (
-            <div classNameName="w-ful h-screen flex items-center m-auto">
+            <div classNameName="w-full h-screen flex items-center m-auto">
                 <Erreur/>
             </div>
         );
     }
     return(
-        <div className="flex flex-col w-full h-screen space-y-2 m-[2em]">
+        <div className="flex flex-col w-full h-screen  space-y-2 m-[2em] overflow-y-hidden">
             <div className="flex flex-col space-y-2">
                 <p className="text-lg text-white font-semibold bg-blue-600 px-2">General</p>
                 <div className="flex flex-col p-2">
@@ -53,7 +53,7 @@ const DetailsTicket=()=>{
             </div>
             <div className="flex flex-col border-t-2">
                 <p className="text-lg text-white font-semibold  bg-blue-600 px-2">Suivi</p>
-                <div className="flex flex-row mx-[1em] space-x-2">
+                <div className="flex flex-row mx-[1em] space-x-2 ">
                     <div className="flex flex-col w-full p-4 shadow-lg h-1/4 ">
                         <p className="font-bold drop-shadow text-gray-600">Commentaires</p>
                         <div className="flex flex-col w-full mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">

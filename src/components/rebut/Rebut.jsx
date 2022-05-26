@@ -5,7 +5,7 @@ const Rebut = ({rebut}) => {
     const{user}=useAuth();
     const BASE_URL=`/personnel/${user.id}/rebut/`
     return ( 
-        <div className="flex flex-col border-2 p-4 mx-4 rounded">
+        <div className="flex flex-col border-2 p-4 mx-4 rounded bg-white">
             <div className="flex">
                 <p className="text-sm font-bold text-gray-600">Date création: </p>
                 <span className="px-4 text-gray-600 text-sm">{rebut.date}</span>

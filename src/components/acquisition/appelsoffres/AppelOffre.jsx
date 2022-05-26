@@ -36,15 +36,15 @@ const AppelOffre = (props) => {
   const{UpdatePortal, isUpdateModalOpen,openUpdateModal,closeUpdateModal}=useUpdateModal();
 
   return (
-    <div  className="flex flex-col border-2 h-fit w-full bg-zinc-200 shadow-lg  px-3 rounded">
+    <div  className="flex flex-col border-0 h-fit w-full bg-white shadow-lg   rounded">
       {/* En-tête */}
-      <div className="flex justify-between">
+      <div className="flex justify-between bg-zinc-200  px-3 py-1 rounded-t">
         <div className="flex flex-col">
-          <h1 className="text-gray-700">
+          <h1 className="text-gray-700 text-sm">
             <span className="font-semibold text-sm">Reference :</span>{" "}
             {appelOffre.reference}
           </h1>
-          <span className="text-gray-700">
+          <span className="text-gray-700 text-sm">
             <span className="font-semibold text-sm">date</span>: {appelOffre.dateLimite}
           </span>
         </div>
@@ -103,11 +103,11 @@ const AppelOffre = (props) => {
         </div>
       </div>
       {/* bar */}
-      <div className="h-[1px] bg-black"></div>
+      {/* <div className="h-[1px] bg-black"></div> */}
       {/* corps */}
-      <div className="flex justify-between">
+      <div className="flex justify-between px-3">
         {/* body */}
-        <div className="text-gray-500">
+        <div className="text-gray-500 ">
           <span className="font-bold text-sm">objet: </span>
           {appelOffre.objet}
         </div>

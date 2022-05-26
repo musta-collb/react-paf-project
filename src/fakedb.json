@@ -1,4 +1,267 @@
-{
+{ "fournisseurs":[
+  {
+    "id":1,
+    "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+  },
+  {
+    "id":2,
+    "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+  },
+  {
+    "id":3,
+    "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+  },
+  {
+    "id":4,
+    "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+  }
+],
+  "marches":[
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id":1,
+    "date":"12-23-2017",
+    "date_livraiseon":"12-02-2022",
+    "fournisseur":{
+        "raison_sociale": "Marjane",
+        "adresse": "Agadir",
+        "email": "email",
+        "telephone": "telephone",
+        "pays": "Maroc",
+        "secteur": "ppn",
+        "nb_annee_exp": 10,
+        "code_postale": 80000
+    },
+    "offre":{ 
+      "id":1,
+      "reference_ao":"A67KL899"
+     },
+    "details":[
+      {
+        "id":1,
+        "quantite":100,
+        "prix unitaire":2000,
+        "article_generique":{
+          "id":1,
+          "designation":"chaise",
+          "articles":[
+            {
+              "code":"code",
+              "Designation":"chaise COOL"
+            }
+          ]
+        }
+      }
+    ]
+  }
+],
   "articles": [
     {
       "id": 1,

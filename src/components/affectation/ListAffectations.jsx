@@ -27,14 +27,14 @@ const ListAffectations = () => {
     );
   } 
     return ( 
-        <div className="flex flex-col w-full  pb-[2em]">
+        <div className="flex flex-col w-full  pb-[2em] bg-gray-100">
             <div className="p-4">
                 <p className="text-xl font-bold text-gray-600">Gestion des affectations</p>
             </div>
             <div className="flex justify-end p-2 flex-none">
                 <LinkButton settings={{to:"creation", color:"bg-blue-600", text:"Créer une affectation"}}/>
             </div>
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-4">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-4 ">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                         <tr>

@@ -18,8 +18,10 @@ import DetailAppelOffre from "./components/acquisition/appelsoffres/DetailAppelO
 import GestionAcquisition from "./pages/GestionAcquisition.jsx";
 import Principale from "./pages/Personnel/principale.jsx";
 import Offres from "./components/acquisition/offres/Offres.jsx";
-import Marche from "./components/acquisition/marches/Marche.jsx";
-import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseur.jsx";
+import Marches from "./components/acquisition/marches/Marches.jsx";
+import CreationMarche from "./components/acquisition/marches/CreationMarche.jsx";
+import DetailsMarche from "./components/acquisition/marches/DetailsMarche.jsx";
+import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseurs.jsx";
 import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
 import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
 import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcquisition.jsx";
@@ -76,13 +78,19 @@ function App() {
             </AuthGuard>
               }>
               <Route path="" element={<TableauDeBordAcquisition/>}/>
+              {/* appeloffres */}
               <Route path="appelsoffres" element={<AppelsOffres />}/>
               <Route path="appelsoffres/:idAppel" element={<DetailAppelOffre />}/> 
               <Route path="creationappelsoffres" element={<CreationAppelOffre />}/>
+              {/* offres */}
               <Route path="offres" element={<Offres/>} />
               <Route path="offres/:idOffre" element={<DetailsOffre/>}/>
               <Route path="creationoffres" element={<CreationOffre/>}/>
-              <Route path="marche" element={<Marche />} />
+              {/* marches */}
+              <Route path="marches" element={<Marches/>} />
+              <Route path="marches/:idMarche" element={<DetailsMarche/>}/>
+              <Route path="creationmarches" element={<CreationMarche/>}/>
+              {/* fournisseur */}
               <Route path="fournisseurs" element={<Fournisseurs />} />
             </Route>
             {/*gestion ticket*/}

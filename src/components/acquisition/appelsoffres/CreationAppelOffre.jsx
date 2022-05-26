@@ -1,5 +1,6 @@
 import { useFieldArray, useForm } from "react-hook-form"
 import { useMutation } from "react-query";
+import SimpleButton from "../SimpleButton";
 import SubmitButton from "../SubmitButton";
 import { createAppelOffre } from "./apiCall";
 export default function CreationAppelOffre() {
@@ -19,12 +20,13 @@ export default function CreationAppelOffre() {
         await mutation.mutate(data);
     }
     return (
-        <div className="flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em]">
-            <h1 className=" py-3 text-2xl font-bold">Création d'un nouvel appel d'offre</h1>
-            <form action="" className="flex flex-col space-y-2" onSubmit={handleSubmit(onSubmit)}>
+    <div className="flex w-full h-screen">
+        <div className="flex flex-col overflow-y-auto scrollbar px-[2cm] space-y-2 pb-[1em] bg-white">
+            <h1 className=" py-3 text-2xl font-bold text-gray-600">Création d'un nouvel appel d'offre</h1>
+            <form action="" className="flex flex-col space-y-2 " onSubmit={handleSubmit(onSubmit)}>
                 {/*Information générale */}
-                <div className="flex flex-col py-2 space-y-2 shadow-lg border-[1px] rounded-lg p-[2em]">   
-                <h1 className="text-lg font-bold"> Information générale</h1>                
+                <div className="flex flex-col py-2 bg-gray-100 space-y-2 shadow-lg border-[1px] rounded-lg p-[2em]">   
+                <h1 className="text-lg font-bold text-gray-600"> Information générale</h1>                
                 <label htmlFor="reference" className="text-zinc-500">Réference</label>
                 <input 
                 type="text" 
@@ -61,11 +63,11 @@ export default function CreationAppelOffre() {
                 <span className="text-sm text-red-700">{errors.dateLimite?.message}</span>
                 </div>
                 {/* Les biens */}
-                <div className="flex flex-col space-y-2 p-2 border-[1px] rounded-lg p-[2em] shadow-lg">
-                    <h1 className="text-lg font-bold">Les besoins en biens</h1>
+                <div className="flex flex-col space-y-2 p-2 border-[1px] rounded-lg p-[2em] shadow-lg bg-white mt-2">
+                    <h1 className="text-lg font-bold text-gray-600">Les besoins en biens</h1>
                     {/*<div className="flex flex-col md:flex-row overflow-auto justify-between space-x-2">*/}
                     {fields.map((field,index)=>
-                    <div className="flex flex-col rounded border-[2px] p-[1em]">
+                    <div className="flex flex-col rounded border-[2px] p-[1em] bg-gray-100">
                     <div className="flex justify-between items-center">
                         <span className="text-zinc-600 font-bold ">{index+1}</span>
                         <svg onClick={()=>remove(index)} 
@@ -116,12 +118,13 @@ export default function CreationAppelOffre() {
                     </div>
                     )}
                     <div className="flex justify-center">
-                        <button className="p-1 bg-green-600 text-zinc-200 rounded-lg w-32" onClick={()=>append({})}>Ajouter</button>
+                        <SimpleButton settings={{text:"Ajouter", action:()=>append({}), color:"bg-green-600"}}/>
                     </div>
                 </div>
                 <SubmitButton settings={{text:'Créer', color:'bg-red-500'}}/>
             </form>
         </div>
+    </div>
     )
   }
   

@@ -50,6 +50,7 @@ const DetailsOffre = () => {
                 <SimpleButton settings={{text:"Modifier", color:"bg-yellow-300", action:()=>{setIsEditing(true); reset(data)}}}/>
             </div>
             {/* en-tête */}
+            <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col px-[1em] ">
                 {isEditing &&<div className="flex"> <SubmitButton settings={{color:"bg-blue-600", text:"Valider" }}/></div>}
                 <div className="flex space-x-2 items-center">
@@ -208,7 +209,50 @@ const DetailsOffre = () => {
                         </tr>
                     </thead>
                 <tbody>
-                {
+                {   isEditing?
+                    fields.map( (field, index)=>(
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                            <input 
+                            type="text" 
+                            className="text-zinc-500 outline:none rounded h-8 border-zinc-300 w-32 text-sm"
+                            {...register(`biens.${index}.designation`,{required:"La désignation est obligatoire"})}
+                            />
+                            </th>
+                            <td class="px-6 py-4">
+                            <input 
+                            type="text" 
+                            className="text-zinc-500 outline:none rounded h-8 border-zinc-300  w-32 text-sm"
+                            {...register(`biens.${index}.marque`,{required:"La quantité du bien est obligatoire"})}
+                            />
+                            </td>
+                            <td class="px-6 py-4">
+                            <input 
+                            type="text" 
+                            className="text-zinc-500 outline:none rounded h-8 border-zinc-300 w-32 text-sm"
+                            {...register(`biens.${index}.quantite`,{required:"L'unité est obligatoire"})}
+                            />
+                            </td>
+                            <td class="px-6 py-4">
+                            <input 
+                            type="text" 
+                            className="text-zinc-500 outline:none rounded h-8 border-zinc-300 w-32 text-sm"
+                            {...register(`biens.${index}.unite`,{required:"L'unité est obligatoire"})}
+                            />
+                            </td>
+                            <td class="px-6 py-4">
+                            <input 
+                            type="text" 
+                            className="text-zinc-500 outline:none rounded h-8 border-zinc-300 w-32 text-sm"
+                            {...register(`biens.${index}.prix_unitaire`,{required:"L'unité est obligatoire"})}
+                            />
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                ))
+                :
                     data.biens.map( b=>(
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
@@ -237,7 +281,7 @@ const DetailsOffre = () => {
             </div>
 
             {/* Fin detail */}
-            
+            </form >
             <div className="flex justify-end">
                 <LinkButton settings={{to:PARENTURL, color:"bg-zinc-800", text:"retour"}}/>
             </div>

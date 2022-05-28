@@ -1,55 +1,56 @@
-{ "fournisseurs":[
-  {
-    "id":1,
-    "raison_sociale": "Marjane",
-        "adresse": "Agadir",
-        "email": "email",
-        "telephone": "telephone",
-        "pays": "Maroc",
-        "secteur": "ppn",
-        "nb_annee_exp": 10,
-        "code_postale": 80000
-  },
-  {
-    "id":2,
-    "raison_sociale": "Marjane",
-        "adresse": "Agadir",
-        "email": "email",
-        "telephone": "telephone",
-        "pays": "Maroc",
-        "secteur": "ppn",
-        "nb_annee_exp": 10,
-        "code_postale": 80000
-  },
-  {
-    "id":3,
-    "raison_sociale": "Marjane",
-        "adresse": "Agadir",
-        "email": "email",
-        "telephone": "telephone",
-        "pays": "Maroc",
-        "secteur": "ppn",
-        "nb_annee_exp": 10,
-        "code_postale": 80000
-  },
-  {
-    "id":4,
-    "raison_sociale": "Marjane",
-        "adresse": "Agadir",
-        "email": "email",
-        "telephone": "telephone",
-        "pays": "Maroc",
-        "secteur": "ppn",
-        "nb_annee_exp": 10,
-        "code_postale": 80000
-  }
-],
-  "marches":[
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+{
+  "fournisseurs": [
+    {
+      "id": 1,
+      "raison_sociale": "Marjane",
+      "adresse": "Agadir",
+      "email": "email",
+      "telephone": "telephone",
+      "pays": "Maroc",
+      "secteur": "ppn",
+      "nb_annee_exp": 10,
+      "code_postale": 80000
+    },
+    {
+      "id": 2,
+      "raison_sociale": "Marjane",
+      "adresse": "Agadir",
+      "email": "email",
+      "telephone": "telephone",
+      "pays": "Maroc",
+      "secteur": "ppn",
+      "nb_annee_exp": 10,
+      "code_postale": 80000
+    },
+    {
+      "id": 3,
+      "raison_sociale": "Marjane",
+      "adresse": "Agadir",
+      "email": "email",
+      "telephone": "telephone",
+      "pays": "Maroc",
+      "secteur": "ppn",
+      "nb_annee_exp": 10,
+      "code_postale": 80000
+    },
+    {
+      "id": 4,
+      "raison_sociale": "Marjane",
+      "adresse": "Agadir",
+      "email": "email",
+      "telephone": "telephone",
+      "pays": "Maroc",
+      "secteur": "ppn",
+      "nb_annee_exp": 10,
+      "code_postale": 80000
+    }
+  ],
+  "marches": [
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -58,34 +59,34 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  },
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+      ]
+    },
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -94,34 +95,34 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  },
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+      ]
+    },
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -130,34 +131,34 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  },
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+      ]
+    },
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -166,34 +167,34 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  },
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+      ]
+    },
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -202,34 +203,34 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  },
-  {
-    "id":1,
-    "date":"12-23-2017",
-    "date_livraiseon":"12-02-2022",
-    "fournisseur":{
+      ]
+    },
+    {
+      "id": 1,
+      "date": "12-23-2017",
+      "date_livraiseon": "12-02-2022",
+      "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
@@ -238,30 +239,30 @@
         "secteur": "ppn",
         "nb_annee_exp": 10,
         "code_postale": 80000
-    },
-    "offre":{ 
-      "id":1,
-      "reference_ao":"A67KL899"
-     },
-    "details":[
-      {
-        "id":1,
-        "quantite":100,
-        "prix unitaire":2000,
-        "article_generique":{
-          "id":1,
-          "designation":"chaise",
-          "articles":[
-            {
-              "code":"code",
-              "Designation":"chaise COOL"
-            }
-          ]
+      },
+      "offre": {
+        "id": 1,
+        "reference_ao": "A67KL899"
+      },
+      "details": [
+        {
+          "id": 1,
+          "quantite": 100,
+          "prix unitaire": 2000,
+          "article_generique": {
+            "id": 1,
+            "designation": "chaise",
+            "articles": [
+              {
+                "code": "code",
+                "Designation": "chaise COOL"
+              }
+            ]
+          }
         }
-      }
-    ]
-  }
-],
+      ]
+    }
+  ],
   "articles": [
     {
       "id": 1,
@@ -678,25 +679,53 @@
   "offres": [
     {
       "id": 1,
-      "date": "12-23-2017",
-      "reference_ao": "A67KL899",
+      "date": "2022-04-29",
+      "reference_ao": "OFF_27_05_2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
         "email": "email",
         "telephone": "telephone",
         "pays": "Maroc",
-        "secteur": "ppn",
-        "nb_annee_exp": 10,
+        "secteur": "Produits de première nécéssité",
+        "nb_annee_exp": "20024",
         "code_postale": 80000
       },
       "biens": [
         {
-          "designation": "dkfksdkfd",
-          "quantite": "dlkflkdjfkd",
-          "marque": "ksdfkdkfjd",
-          "unite": "sldkjkdjfkld",
-          "prix_unitaire": "kjhjhjjhk"
+          "designation": "Nappe ",
+          "quantite": "20",
+          "marque": "Cool",
+          "unite": "nappe",
+          "prix_unitaire": "500DH"
+        },
+        {
+          "designation": "Banc",
+          "marque": "IKEA",
+          "quantite": "200",
+          "unite": "banc",
+          "prix_unitaire": "200 DH"
+        },
+        {
+          "designation": "Chaise",
+          "marque": "IKEA",
+          "quantite": "100",
+          "unite": "chaise",
+          "prix_unitaire": "100DH"
+        },
+        {
+          "designation": "Rideau",
+          "marque": "Cool",
+          "quantite": "10",
+          "unite": "table",
+          "prix_unitaire": "80dh"
+        },
+        {
+          "designation": "Souris",
+          "marque": "HP",
+          "quantite": "2",
+          "unite": "souris",
+          "prix_unitaire": "40DH"
         }
       ]
     },
@@ -988,20 +1017,20 @@
           "descriptionBien": "Pour les étudiants"
         },
         {
-          "designation": "sdkfdkfjd",
-          "quantite": "lsdkjfskldjfd",
-          "unite": "sldkfjdkfjd",
-          "descriptionBien": "sldkjfkldjfkld"
+          "designation": "Tablette",
+          "quantite": "2",
+          "unite": "tablette",
+          "descriptionBien": "Talblette pour les étudiants"
         },
         {
-          "designation": "mkmkk",
-          "quantite": "lkkljkl",
-          "unite": "lklkj",
-          "descriptionBien": "mkmlkl"
+          "designation": "Tableau",
+          "quantite": "1",
+          "unite": "tableau",
+          "descriptionBien": "Tableau blanche"
         }
       ],
-      "reference": "AO_18_05_2022",
-      "objet": "Equipement des écoles d'ingnieur au Maroc",
+      "reference": "AO_18_05_2027",
+      "objet": "Equipement des écoles d'inégnieur au Maroc",
       "budget": "1000000 dh",
       "description": "Le projet a comme objectif de construire un outil efficace pour gérer un patrimoine (ordinateur, imprimante, matériel informatique, fourniture…) et suivre sans état dans l’entreprise. Ce besoin nous impose de décortiquer notre application en des sous modules.",
       "dateLimite": "2022-04-23",

@@ -7,8 +7,7 @@ import { fetchAllAppelOffre } from "./apiCall";
 import { useEffect , useState} from "react";
 
 const AppelsOffres = () => {
-  const{isLoading, isError, data, error,status}=useQuery('appelsOffres',fetchAllAppelOffre);
-
+  const{isLoading, isError, data, error,status, refetch}=useQuery('appelsOffres',fetchAllAppelOffre);
   if(isLoading) 
   return (
     <Loading/>
@@ -54,7 +53,7 @@ const AppelsOffres = () => {
       {/* Les appels d'offres */}
       <div className="p-3  flex flex-col flex-auto space-y-4 overflow-y-auto h-screen scrollbar bg-gray-100 ">
         {data.map((ao) => (
-          <AppelOffre appelOffre={ao} />
+          <AppelOffre appelOffre={ao} refetch={refetch} />
         ))}
       </div>
     </div>

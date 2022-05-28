@@ -9,7 +9,7 @@ const AppelOffre = (props) => {
   //Route stuff
   const { id } = useParams();
   const PARENTURL = `/personnel/${id}/acquisition/appelsoffres`;
-  const { appelOffre } = props;
+  const { appelOffre, refetch } = props;
   //Portalstuff
   //For deletion
   const useDeleteModal=()=>{
@@ -71,7 +71,7 @@ const AppelOffre = (props) => {
             {
               isUpdateModalOpen &&
               <UpdatePortal>
-                <UpdateModal context={{idAppel:appelOffre.id,closeUpdateModal}}/>
+                <UpdateModal context={{idAppel:appelOffre.id, closeUpdateModal , refetch}}/>
               </UpdatePortal>  
             }
           </div>

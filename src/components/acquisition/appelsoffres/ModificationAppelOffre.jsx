@@ -6,18 +6,16 @@ import SubmitButton from "../SubmitButton";
 import { updateAppelOffre, fetchAppelOffre } from "./apiCall";
 import { useEffect } from "react";
 import SimpleButton from "../SimpleButton";
-const ModificationAppelOffre = ({idAppel, close}) => {
+const ModificationAppelOffre = ({idAppel, close, refetch }) => {
     const queryClient=new QueryClient({});
     //data fetching
     const{ data,isLoading, isError, error}=useQuery('detail_appel_offre_for_update', ()=>fetchAppelOffre(idAppel));
     //mutation
     const mutation=useMutation(updateAppelOffre,{
-        onSuccess:async()=>{
-            await queryClient.invalidateQueries('appelsoffres',{
-                exact:true,
-                refetchActive: true,
-                refetchInactive: true
-            },{ throwOnError:true, cancelRefetch:true })
+        onSuccess: data => {
+            const queryClient=new QueryClient({});
+            queryClient.setQueryData(['appelsoffres', { id: idAppel }], data)
+            refetch();
         }
     })
     //Form shits

@@ -7,7 +7,8 @@ export const createOffre = offre=>{
     return axios.post('offres',offre)
 }
 export const updateOffre = offre=>{
-    return axios.put('/offres/'+offre.id,offre)
+     return  axios.put('/offres/'+offre.id,offre)
+     
 }
 export const fetchAllOffres = async()=>{
     const res= await axios.get('/offres');

@@ -22,6 +22,7 @@ import Marches from "./components/acquisition/marches/Marches.jsx";
 import CreationMarche from "./components/acquisition/marches/CreationMarche.jsx";
 import DetailsMarche from "./components/acquisition/marches/DetailsMarche.jsx";
 import Fournisseurs from "./components/acquisition/fournisseurs/Fournisseurs.jsx";
+import DetailsFournisseur from "./components/acquisition/fournisseurs/DetailsFournisseur.jsx";
 import DetailsOffre from "./components/acquisition/offres/DetailsOffre.jsx";
 import CreationOffre from "./components/acquisition/offres/CreationOffre.jsx";
 import TableauDeBordAcquisition from "./components/acquisition/TableauDeBordAcquisition.jsx";
@@ -92,6 +93,7 @@ function App() {
               <Route path="creationmarches" element={<CreationMarche/>}/>
               {/* fournisseur */}
               <Route path="fournisseurs" element={<Fournisseurs />} />
+              <Route path="fournisseurs/:idFournisseur" element={<DetailsFournisseur/>} />
             </Route>
             {/*gestion ticket*/}
             <Route path="ticket_reclamation" element={

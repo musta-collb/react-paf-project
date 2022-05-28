@@ -50,23 +50,10 @@ const DetailsOffre = () => {
             </div>
             {/* en-tête */}
             <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex flex-col px-[1em] ">
                 {isEditing ?<div className="flex justify-end"> <SubmitButton settings={{color:"bg-blue-600", text:"Valider" }}/></div>:
                 <SimpleButton settings={{text:"Modifier", color:"bg-yellow-300", action:()=>{setIsEditing(true); reset(data)}}}/>}
-                <div className="flex space-x-2 items-center">
-                    <p className="text-sm font-medium">Date: </p>
-                    {isEditing?
-                        <input 
-                        type="date" 
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
-                        {...register("date",{required:"La date est obligatoire"})}
-                        />
-                        :
-                        <div className="text-sm">{data.date}</div>
-                    }     
-                </div>
-                <div className="flex space-x-2 mb-2 items center">
-                    <p className="text-sm font-medium">Reference appel d'offre:</p>
+                <div className="grid grid-cols-2 w-fit mb-2">
+                    <p className="text-sm font-medium  p-0.5 m-0.5">Reference appel d'offre:</p>
                     {isEditing?
                     <input 
                     type="text"  
@@ -74,108 +61,104 @@ const DetailsOffre = () => {
                     {...register("reference_ao",{required:"La référence de l'appel d'offre est obligatoire"})}
                     />
                     :
-                    <div className="text-sm">{data.reference_ao}</div>
+                    <div className="text-sm text-gray-600 px-2 p-0.5 m-0.5 bg-gray-300 rounded">{data.reference_ao}</div>
                     }
+                    <p className="text-sm font-medium  p-0.5 m-0.5">Date: </p>
+                    {isEditing?
+                        <input 
+                        type="date" 
+                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        {...register("date",{required:"La date est obligatoire"})}
+                        />
+                        :
+                        <div className="text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.date}</div>
+                    }     
                 </div>
-            </div>
             {/*Fournisseur */}
             <div className="flex flex-col rounded shadow-lg bg-white pb-2 mb-2">
                 <div className="flex font-bold rounded-t text-xl bg-zinc-200 px-[1em] text-gray-600">Fournisseur</div>
                 <div className="flex flex-col px-[1em]">
-                    <div className="flex space-x-2 px-[1em] items-center ">
-                        <p className="font-medium text-md">Raison social:</p>
+                    <div className="grid grid-cols-2 w-fit">
+                        <p className="font-medium text-md ">Raison social:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm px-2 p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.raison_sociale`,{required:"La raison_sociale est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.raison_sociale}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5 ">{data.fournisseur.raison_sociale}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">Adresse:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm px-2 p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.adresse`,{required:"L'adresse est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.adresse}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.adresse}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">E-mail:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm px-2 p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.email`,{required:"L'email est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.email}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.email}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">Téléphone:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm px-2 p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.telephone`,{required:"Le telephone est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.telephone}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.telephone}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
+
                         <p className="font-medium text-md">Pays:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm p-0.5 px-2 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.pays`,{required:"Le pays est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.pays}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.pays}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">Secteur:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm p-0.5  px-2 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.secteur`,{required:"Le secteur est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.secteur}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.secteur}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">Nombre année d'expertise:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
+                        class="text-sm p-0.5 px-2 border-gray-300 rounded text-gray-600 m-0.5" 
                         {...register(`fournisseur.nb_annee_exp`,{required:"Le nombre d'année d'expérience est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.nb_annee_exp}</div>
+                        <div className="font-normal  text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.nb_annee_exp}</div>
                         }
-                    </div>
-                    <div className="flex space-x-2 px-[1em]">
                         <p className="font-medium text-md">Code postale:</p>
                         {isEditing?
                         <input 
                         type="text"  
-                        class="text-sm p-0.5 border-gray-300 rounded text-gray-600 m-0.5" 
-                        {...register(`fournisseur.email`,{required:"L'email est obligatoire"})}
+                        class="text-sm p-0.5 px-2 border-gray-300 rounded text-gray-600 m-0.5" 
+                        {...register(`fournisseur.code_postale`,{required:"Le code postal est obligatoire"})}
                         />
                         :
-                        <div className="font-normal text-md">{data.fournisseur.code_postale}</div>
+                        <div className="font-normal text-sm text-gray-600 px-2 p-0.5 m-0.5">{data.fournisseur.code_postale}</div>
                         }
                     </div>
                 </div>
@@ -277,7 +260,7 @@ const DetailsOffre = () => {
             {/* Fin detail */}
             </form >
             <div className="flex justify-end">
-                <LinkButton settings={{to:PARENTURL, color:"bg-zinc-800", text:"retour"}}/>
+                <LinkButton settings={{to:PARENTURL, color:"bg-gray-600", text:"retour"}}/>
             </div>
         </div>
     );

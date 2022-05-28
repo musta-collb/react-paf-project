@@ -21,7 +21,7 @@ const Ticket=({ticket})=>{
                     <div className="">Interventions</div>
                     <span className="">{ticket.interventions.length}</span>
                 </div>
-                <LinkButton settings={{to:`${ticket.id}`, text:"plus ...", color:"bg-zinc-800"}}/>
+                <LinkButton settings={{to:`${ticket.id}`, text:"plus ...", color:"bg-gray-600"}}/>
             </div>
         </div>
     );

@@ -40,8 +40,8 @@ const DetailsTicket=()=>{
         );
     }
     return(
-        <div className="flex flex-col w-full h-screen  space-y-2 m-[2em] overflow-y-hidden">
-            <div className="flex flex-col space-y-2">
+        <div className="flex flex-col w-full h-screen  space-y-2 m-[2em] overflow-y-hidden bg-gray-100">
+            <div className="flex flex-col space-y-2 bg-white shadow-lg">
                 <p className="text-lg text-white font-semibold bg-blue-600 px-2">General</p>
                 <div className="flex flex-col p-2">
                 <div className="text-sm"><span className="font-bold">Date : </span>{data.date}</div>
@@ -54,7 +54,7 @@ const DetailsTicket=()=>{
             <div className="flex flex-col border-t-2">
                 <p className="text-lg text-white font-semibold  bg-blue-600 px-2">Suivi</p>
                 <div className="flex flex-row mx-[1em] space-x-2 ">
-                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4 ">
+                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4 bg-white ">
                         <p className="font-bold drop-shadow text-gray-600">Commentaires</p>
                         <div className="flex flex-col w-full mx-[1em] overflow-y-auto scrollbar space-y-2 p-2">
                             {
@@ -72,7 +72,7 @@ const DetailsTicket=()=>{
                                 </CommentPortal>
                             }
                     </div>
-                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4">
+                    <div className="flex flex-col w-full p-4 shadow-lg h-1/4 bg-white">
                         <p className="font-bold text-gray-600">Interventions</p>
                         <div className="flex flex-col w-full mx-[1em] p-2">
 

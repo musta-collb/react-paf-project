@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "raison_sociale": "Marjane",
+      "raison_sociale": "Coca cola",
       "adresse": "Agadir",
       "email": "email",
       "telephone": "telephone",
@@ -24,10 +24,10 @@
     },
     {
       "id": 3,
-      "raison_sociale": "Marjane",
-      "adresse": "Agadir",
+      "raison_sociale": "Danone",
+      "adresse": "AGADIR",
       "email": "email",
-      "telephone": "telephone",
+      "telephone": "088-789-7891",
       "pays": "Maroc",
       "secteur": "ppn",
       "nb_annee_exp": 10,
@@ -682,19 +682,20 @@
       "date": "2022-04-29",
       "reference_ao": "OFF_27_05_2022",
       "fournisseur": {
-        "raison_sociale": "Marjane",
+        "raison_sociale": "Marjane3",
         "adresse": "Agadir",
         "email": "email",
         "telephone": "telephone",
         "pays": "Maroc",
         "secteur": "Produits de première nécéssité",
         "nb_annee_exp": "20024",
-        "code_postale": 80000
+        "code_postale": 80000,
+        "code": "email"
       },
       "biens": [
         {
           "designation": "Nappe ",
-          "quantite": "20",
+          "quantite": "100",
           "marque": "Cool",
           "unite": "nappe",
           "prix_unitaire": "500DH"
@@ -726,6 +727,13 @@
           "quantite": "2",
           "unite": "souris",
           "prix_unitaire": "40DH"
+        },
+        {
+          "designation": "Lit",
+          "marque": "IKEA",
+          "quantite": "3",
+          "unite": "lit",
+          "prix_unitaire": "1000DH"
         }
       ]
     },
@@ -993,6 +1001,120 @@
         "nb_annee_exp": "sdfdfdfd"
       },
       "id": 13
+    },
+    {
+      "biens": [
+        {
+          "designation": "Souris",
+          "marque": "HP",
+          "quantite": "200",
+          "unite": "souris",
+          "prix_unitaire": "40DH"
+        },
+        {
+          "designation": "PC",
+          "marque": "HP",
+          "quantite": "2",
+          "unite": "pc",
+          "prix_unitaire": "5000DH"
+        },
+        {
+          "designation": "Projecteur",
+          "marque": "HP",
+          "quantite": "10",
+          "unite": "projecteur",
+          "prix_unitaire": "23999DH"
+        }
+      ],
+      "reference_ao": "A67KL899",
+      "date": "2022-05-06",
+      "fournisseur": {
+        "raison_sociale": "Hewler Packard",
+        "email": "hp@gmail.com",
+        "telephone": "062-953-2681",
+        "adresse": "New york",
+        "pays": "USA",
+        "code_postale": "20000",
+        "secteur": "Informatique ",
+        "nb_annee_exp": "50"
+      },
+      "id": 14
+    },
+    {
+      "biens": [
+        {
+          "designation": "Souris",
+          "marque": "HP",
+          "quantite": "200",
+          "unite": "souris",
+          "prix_unitaire": "40DH"
+        },
+        {
+          "designation": "PC",
+          "marque": "HP",
+          "quantite": "2",
+          "unite": "pc",
+          "prix_unitaire": "5000DH"
+        },
+        {
+          "designation": "Projecteur",
+          "marque": "HP",
+          "quantite": "10",
+          "unite": "projecteur",
+          "prix_unitaire": "23999DH"
+        }
+      ],
+      "reference_ao": "A67KL899",
+      "date": "2022-05-06",
+      "fournisseur": {
+        "raison_sociale": "Hewler Packard",
+        "email": "hp@gmail.com",
+        "telephone": "062-953-2681",
+        "adresse": "New york",
+        "pays": "USA",
+        "code_postale": "20000",
+        "secteur": "Informatique ",
+        "nb_annee_exp": "50"
+      },
+      "id": 15
+    },
+    {
+      "biens": [
+        {
+          "designation": "Souris",
+          "marque": "HP",
+          "quantite": "200",
+          "unite": "souris",
+          "prix_unitaire": "40DH"
+        },
+        {
+          "designation": "PC",
+          "marque": "HP",
+          "quantite": "2",
+          "unite": "pc",
+          "prix_unitaire": "5000DH"
+        },
+        {
+          "designation": "Projecteur",
+          "marque": "HP",
+          "quantite": "10",
+          "unite": "projecteur",
+          "prix_unitaire": "23999DH"
+        }
+      ],
+      "reference_ao": "A67KL899",
+      "date": "2022-05-06",
+      "fournisseur": {
+        "raison_sociale": "Hewler Packard",
+        "email": "hp@gmail.com",
+        "telephone": "062-953-2681",
+        "adresse": "New york",
+        "pays": "USA",
+        "code_postale": "20000",
+        "secteur": "Informatique ",
+        "nb_annee_exp": "50"
+      },
+      "id": 16
     }
   ],
   "appelsoffres": [
@@ -1030,7 +1152,7 @@
         }
       ],
       "reference": "AO_18_05_2027",
-      "objet": "Equipement des écoles d'inégnieur au Maroc",
+      "objet": "Equipement des écoles d'inégnieur au Maroc dfsdjfljsdklfjksdjf sdlfkjsdklfjsdkjfksd sldkfjsdkljfkdjfssdlfkjsdkf sldkfjkjfksd sdfksdjfkdlfjdkfsd sdkfsldkfjksdjf",
       "budget": "1000000 dh",
       "description": "Le projet a comme objectif de construire un outil efficace pour gérer un patrimoine (ordinateur, imprimante, matériel informatique, fourniture…) et suivre sans état dans l’entreprise. Ce besoin nous impose de décortiquer notre application en des sous modules.",
       "dateLimite": "2022-04-23",
@@ -1043,6 +1165,18 @@
           "descriptionBien": "Box wifi",
           "quantite": "10",
           "unite": "box"
+        },
+        {
+          "designation": "Routeur",
+          "quantite": "2",
+          "unite": "routeur",
+          "descriptionBien": "Routeur CISCO "
+        },
+        {
+          "designation": "Serveur",
+          "quantite": "1",
+          "unite": "serveur",
+          "descriptionBien": "Serveur "
         }
       ],
       "reference": "AO_19_05_2022",

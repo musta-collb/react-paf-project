@@ -107,13 +107,13 @@ const AppelOffre = (props) => {
       {/* corps */}
       <div className="flex justify-between px-3">
         {/* body */}
-        <div className="text-gray-500 ">
-          <span className="font-bold text-sm">objet: </span>
-          {appelOffre.objet}
+        <div className="flex">
+          <span className="font-bold text-sm p-1">objet: </span>
+          <span className="text-gray-500 text-sm p-1">{appelOffre.objet}</span>
         </div>
         {/* control */}
         <div className="flex flex-col justify-end space-2">
-          <LinkButton settings={{to:PARENTURL + `/${appelOffre.id}`, color:"bg-zinc-800", text:"Détails"}}/>
+          <LinkButton settings={{to:PARENTURL + `/${appelOffre.id}`, color:"bg-gray-600", text:"Détails"}}/>
         </div>
       </div>
     </div>

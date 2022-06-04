@@ -28,7 +28,7 @@ const Marches = () => {
           Les marchés
         </h1>
         <div className="flex flex-col md:flex-row space-y-2 justify-end p-2 items-center float-right">
-          <LinkButton settings={{ text:"Nouveau marché", color:"bg-blue-600", to:"creationmarches"}}/>
+          <LinkButton settings={{ text:"Nouveau marché", color:"bg-blue-600", to:"../creationmarches"}}/>
         </div>
       </div>
       {/* Les offres d'offres */}

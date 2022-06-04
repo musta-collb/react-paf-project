@@ -16,18 +16,18 @@ const ListTickets=()=>{
   if(isError){
     console.log(error)
     return (
-        <div className="w-ful h-screen  flex items-center m-auto">
+        <div className="w-full h-screen  flex items-center m-auto">
             <Erreur/>
         </div>
     );
   } 
     return (
         
-            <div className="flex flex-col w-full space-y-1 m-4">
+            <div className="flex flex-col w-full space-y-1 m-4 bg-gray-100">
                 <div className="p-4">
-                    <p className="text-xl font-bold">Gestion des tickets</p>
+                    <p className="text-xl font-bold text-gray-600">Gestion des tickets</p>
                 </div>
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-2 ">
                     {
                         data.map(ticket=><Ticket key={ticket} ticket={ticket}/>)
                     }

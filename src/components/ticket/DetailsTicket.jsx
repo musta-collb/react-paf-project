@@ -26,7 +26,7 @@ const DetailsTicket=()=>{
 
   if(isLoading) 
   return (
-      <div classNameName="w-full h-screen flex items-center m-auto">    
+      <div className="w-full h-screen flex items-center m-auto">    
             <Loading/>
       </div>
     );
@@ -34,7 +34,7 @@ const DetailsTicket=()=>{
     if(isError){
         console.log(error)
         return (
-            <div classNameName="w-full h-screen flex items-center m-auto">
+            <div className="w-full h-screen flex items-center m-auto">
                 <Erreur/>
             </div>
         );

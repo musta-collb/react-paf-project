@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import LinkButton from "../LinkButton";
 import Erreur from "../Erreur";
 import Loading from "../Loading";
@@ -24,30 +24,30 @@ const DetailAppelOffre = () => {
       <div className="flex flex-col border-[1px] space-2 rounded bg-white shadow-lg">
         <div className="flex bg-gray-200 rounded-t">
           <div className="flex space-x-2 w-full mx-4 my-2">
-            <span className="font-semibold text-zinc-600">Reference:</span>
-            <span className="text-gray-600">{data.reference}</span>
+            <span className="font-semibold text-zinc-600 text-sm">Reference:</span>
+            <span className="text-gray-600 text-sm">{data.reference}</span>
           </div>
           <div className="flex space-x-2 w-full mx-4 my-2">
-            <span className="font-semibold text-zinc-600">Date:</span>
+            <span className="font-semibold text-zinc-600 text-sm">Date:</span>
             <span className="text-gray-600 text-sm">{data.dateLimite}</span>
           </div>
         </div>
         <div className="grid grid-cols-2 my-2 mx-4 w-fit">
-          <span className="font-semibold text-zinc-600">Budget:</span>
+          <span className="font-semibold text-zinc-600 text-sm">Budget:</span>
           <span className="text-gray-600 text-sm">{data.budget}</span>
-          <span className="font-semibold text-zinc-600">Objet:</span>
+          <span className="font-semibold text-zinc-600 text-sm">Objet:</span>
           <span className="text-gray-600 text-sm">{data.objet}</span>
-          <span className="font-semibold text-zinc-600">
+          <span className="font-semibold text-zinc-600 text-sm">
             Date limite reponse:
           </span>
           <span className="text-gray-600 text-sm">{data.dateLimite}</span>
-          <span className="font-semibold text-zinc-600">
+          <span className="font-semibold text-zinc-600 text-sm">
             Date de livraison au plus tard:
           </span>
           <span className="text-gray-600 text-sm">{data.dateLimite}</span>
         </div>
         <div className="flex flex-col space-x-2 mx-4 mb-2">
-          <span className="font-semibold text-zinc-600">Descriptions:</span>
+          <span className="font-semibold text-zinc-600 text-sm">Descriptions:</span>
           <span className="text-sm text-gray-700">{data.description}</span>
         </div>
         <div className="flex space-x-2 mx-4 mb-2 items-center">
@@ -84,7 +84,7 @@ const DetailAppelOffre = () => {
         </tbody>
         </table>
       <div className="flex justify-end px-4">
-        <LinkButton settings={{to:PARENTURL, color:"bg-zinc-800", text:"retour"}}/>
+        <LinkButton settings={{to:PARENTURL, color:"bg-gray-600", text:"retour"}}/>
       </div>
     </div>
   );

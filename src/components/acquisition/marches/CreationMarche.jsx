@@ -1,6 +1,6 @@
 const CreationMarche = () => {
     return ( 
-        <div className="">
+        <div className="w-full h-screen">
             creattion marche 
         </div>
      );

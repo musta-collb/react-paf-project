@@ -3,7 +3,7 @@ import LinkButton from "../acquisition/LinkButton";
 const Ticket=({ticket})=>{
     console.log(ticket)
     return ( 
-        <div className="flex justify-between  items-center  shadow py-1 px-4 bg-zinc-100 rounded">
+        <div className="flex justify-between  items-center  shadow py-1 px-4  rounded bg-white">
             <div className="flex items-center space-x-4">
                 <div className="font-bold">ID_Ticket: </div>
                 <span className="">{ticket.id}</span>

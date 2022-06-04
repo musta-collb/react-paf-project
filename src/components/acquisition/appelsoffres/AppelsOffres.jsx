@@ -1,5 +1,6 @@
 import AppelOffre from "./AppelOffre";
 import { Link } from "react-router-dom";
+import LinkButton from "../LinkButton";
 import {useQuery} from "react-query";
 import Erreur from "../Erreur";
 import Loading from "../Loading";
@@ -8,16 +9,8 @@ import { useEffect , useState} from "react";
 
 const AppelsOffres = () => {
   const{isLoading, isError, data, error,status, refetch}=useQuery('appelsOffres',fetchAllAppelOffre);
-  if(isLoading) 
-  return (
-    <Loading/>
-    );
-
-  if(isError){
-    console.log(error)
-    return (<Erreur/>);
-  } 
-  
+  if(isLoading) return (<Loading/>);
+  if(isError) return (<Erreur/>);
   return (
     <div  className="flex flex-col grow space-y-2 ">
       {/* en-tête */}
@@ -25,7 +18,10 @@ const AppelsOffres = () => {
         <h1 className=" font-bold text-2xl text-zinc-600">
           Les appels d'offres
         </h1>
-        <div className="flex flex-col md:flex-row space-y-2 justify-end p-2 items-center float-right">
+        <div className="flex justify-end">
+          <LinkButton settings={{ text:"Nouveau", color:"bg-blue-600", to:"../creationappelsoffres"}}/>
+        </div>
+        {/* <div className="flex flex-col md:flex-row space-y-2 justify-end p-2 items-center float-right">
           <button className="flex space-x-2 items-center bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +44,7 @@ const AppelsOffres = () => {
               Add
             </Link>
           </button>
-        </div>
+        </div> */}
       </div>
       {/* Les appels d'offres */}
       <div className="p-3  flex flex-col flex-auto space-y-4 overflow-y-auto h-screen scrollbar bg-gray-100 ">

@@ -6,10 +6,14 @@ import useAuth from "../../hooks/useAuth";
 
 const Principale = () => {
   const { id } = useParams();
+  const[myLinks,setMyLinks]=useState([])
   const navigate = useNavigate();
   const { user } = useAuth();
   const getUserLinks=(user)=>{
-    if(user==null) navigate('/personnel/login')
+    if(user===null || user===undefined) {
+      console.log("cool")
+      navigate('/personnel/login')
+    } 
     var links=[
       {
         title:"Accueil",
@@ -53,8 +57,10 @@ const Principale = () => {
     });
     return links;
   }
-
-  const myLinks=getUserLinks(user);
+  useEffect(()=>{
+     //myLinks=getUserLinks(user);
+     setMyLinks(getUserLinks(user))
+  },[])
   return (
     <div className="w-full ">
       <NavBar links={myLinks} />

@@ -36,6 +36,7 @@ const AppelOffre = (props) => {
   const{UpdatePortal, isUpdateModalOpen,openUpdateModal,closeUpdateModal}=useUpdateModal();
 
   return (
+    <div className="flex px-[1em]">
     <div  className="flex flex-col border-0 h-fit w-full bg-white shadow-lg   rounded">
       {/* En-tête */}
       <div className="flex justify-between bg-zinc-200  px-3 py-1 rounded-t">
@@ -117,6 +118,7 @@ const AppelOffre = (props) => {
         </div>
       </div>
     </div>
+  </div>
   );
 };
 

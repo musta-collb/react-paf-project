@@ -5,6 +5,7 @@ const Offre = ({offre}) => {
     const { id } = useParams();
     const PARENTURL = `/personnel/${id}/acquisition/offres`;
     return ( 
+        <div className="flex px-[1em]">
         <div className="flex flex-col h-fit w-full bg-white shadow-lg rounded p-2">
                 <div className="flex  px-1 space-x-2 mx-4">
                     <p className="font-semibold text-gray-600 text-sm">Reference appel d'offre :</p>
@@ -22,6 +23,7 @@ const Offre = ({offre}) => {
                     <LinkButton settings={{to:PARENTURL + `/${offre.id}`, color:"bg-gray-600", text:"Détails"}}/>
                 </div>
         </div>
+    </div>
      );
 }
  

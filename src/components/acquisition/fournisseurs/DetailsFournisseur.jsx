@@ -40,7 +40,7 @@ const DetailsFournisseur = () => {
     return ( 
         <div className="flex flex-col w-full h-screen p-4">
             <div className="flex justify-between m-2">
-                <h1 className="font-bold text-2xl text-gray-600 ">Détails du fournisseur</h1>
+                <h1 className="font-bold text-2xl text-gray-600 underline">Détails du fournisseur</h1>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
             {isEditing ?

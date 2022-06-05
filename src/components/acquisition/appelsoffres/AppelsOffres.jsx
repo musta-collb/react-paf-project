@@ -15,7 +15,7 @@ const AppelsOffres = () => {
     <div  className="flex flex-col grow space-y-2 ">
       {/* en-tête */}
       <div className="flex  flex-col flex-none drop shadow-lg px-4  pt-1 pb-2">
-        <h1 className=" font-bold text-2xl text-zinc-600">
+        <h1 className=" font-bold text-2xl text-zinc-600 underline">
           Les appels d'offres
         </h1>
         <div className="flex justify-end">

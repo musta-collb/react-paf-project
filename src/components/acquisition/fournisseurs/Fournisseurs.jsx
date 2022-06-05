@@ -28,10 +28,12 @@ const Fournisseurs = () => {
       </div>
       {/* Les offres d'offres */}
       {/* <div className="p-3  flex flex-col bg-gray-100 flex-auto space-y-2 h-screen overflow-y-auto scrollbar "> */}
-      <div className=" m-4 grid grid-cols-3 gap-4"> 
+      <div className="px-[2em] pt-[1em]">
+      <div className="grid grid-cols-3 gap-4"> 
         {data.map((f) => (
            <Fournisseur fournisseur={f}/>
         ))}
+      </div>
       </div>
     </div>);
 }

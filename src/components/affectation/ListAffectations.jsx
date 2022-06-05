@@ -27,9 +27,9 @@ const ListAffectations = () => {
     );
   } 
     return ( 
-        <div className="flex flex-col w-full  pb-[2em] bg-gray-100">
+        <div className="flex flex-col w-full  pb-[2em] bg-gray-100 mx-[1em]">
             <div className="p-4">
-                <p className="text-xl font-bold text-gray-600">Gestion des affectations</p>
+                <p className="text-xl font-bold text-gray-600 underline">Gestion des affectations</p>
             </div>
             <div className="flex justify-end p-2 flex-none">
                 <LinkButton settings={{to:"creation", color:"bg-blue-600", text:"Créer une affectation"}}/>

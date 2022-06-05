@@ -392,6 +392,98 @@
           "designation": "dslkfkdfs"
         }
       ]
+    },
+    {
+      "exploiteur": {
+        "type": "Bureau",
+        "responsable": "Mr Manavana"
+      },
+      "duree": "2 jours",
+      "articles": [
+        {
+          "id": 2,
+          "etat": "dispo",
+          "designation": "Blouse"
+        },
+        {
+          "id": 1,
+          "designation": "Banc"
+        }
+      ],
+      "details": "",
+      "date": "Sat Jun 04 2022 19:34:55 GMT+0100 (UTC+01:00)",
+      "id": 3
+    },
+    {
+      "exploiteur": {
+        "type": "Personnel",
+        "responsable": "Mr Bodin"
+      },
+      "duree": "2 jours",
+      "articles": [
+        {
+          "id": 1,
+          "designation": "Banc"
+        },
+        {
+          "id": 24,
+          "designation": "Blouse"
+        }
+      ],
+      "details": "",
+      "date": "2022-06-04",
+      "id": 4
+    },
+    {
+      "exploiteur": {
+        "type": "Bureau",
+        "responsable": "Mr Ahmed"
+      },
+      "duree": "2 jours",
+      "articles": [
+        {
+          "id": 3,
+          "etat": "dispo",
+          "designation": "Blouse"
+        },
+        {
+          "id": 1,
+          "designation": "Banc"
+        }
+      ],
+      "details": "",
+      "date": "2022-06-04",
+      "id": 5
+    },
+    {
+      "exploiteur": {
+        "type": "Bureau",
+        "responsable": "Mr Bodin"
+      },
+      "duree": "2 jours",
+      "articles": [
+        {
+          "id": 2,
+          "etat": "dispo",
+          "designation": "Blouse"
+        },
+        {
+          "id": 1,
+          "designation": "Banc"
+        },
+        {
+          "id": 24,
+          "designation": "Blouse"
+        },
+        {
+          "id": 3,
+          "etat": "dispo",
+          "designation": "Blouse"
+        }
+      ],
+      "details": "",
+      "date": "2022-06-04",
+      "id": 6
     }
   ],
   "tickets": [
@@ -739,6 +831,20 @@
           "quantite": "3",
           "unite": "lit",
           "prix_unitaire": "1000DH"
+        },
+        {
+          "designation": "Cool ",
+          "marque": "Cool",
+          "quantite": "Cool",
+          "unite": "Yeah",
+          "prix_unitaire": "5600"
+        },
+        {
+          "designation": "lsdkjflkdjf",
+          "marque": "skdjfsjkdhf",
+          "quantite": "skdfjdjk",
+          "unite": "sdkjfkldj",
+          "prix_unitaire": "sdkfd"
         }
       ]
     },
@@ -1157,7 +1263,7 @@
         }
       ],
       "reference": "AO_18_05_2027",
-      "objet": "Equipement des écoles d'inégnieur au Maroc dfsdjfljsdklfjksdjf sdlfkjsdklfjsdkjfksd sldkfjsdkljfkdjfssdlfkjsdkf sldkfjkjfksd sdfksdjfkdlfjdkfsd sdkfsldkfjksdjf",
+      "objet": "Equipement des écoles d'inégnieur au Maroc ",
       "budget": "1000000 dh",
       "description": "Le projet a comme objectif de construire un outil efficace pour gérer un patrimoine (ordinateur, imprimante, matériel informatique, fourniture…) et suivre sans état dans l’entreprise. Ce besoin nous impose de décortiquer notre application en des sous modules.",
       "dateLimite": "2022-04-23",

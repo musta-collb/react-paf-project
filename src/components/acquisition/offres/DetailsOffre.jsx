@@ -46,7 +46,7 @@ const DetailsOffre = () => {
     return (
         <div className="flex flex-col p-[1em] space-y-2 w-full bg-gray-100">
             <div className="flex justify-between">
-                <h1 className="font-bold text-2xl text-gray-600 ">Détails de l'offres</h1>
+                <h1 className="font-bold text-2xl text-gray-600 underline">Détails de l'offres</h1>
             </div>
             {/* en-tête */}
             <form onSubmit={handleSubmit(onSubmit)}>

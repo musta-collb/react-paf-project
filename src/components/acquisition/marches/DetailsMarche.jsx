@@ -41,7 +41,7 @@ const DetailsMarches = () => {
     return ( 
         <div className="flex flex-col p-[1em] space-y-2 w-full">
             <div className="flex justify-between m-2">
-                <h1 className="font-bold text-2xl text-gray-600 ">Détails du marché</h1>
+                <h1 className="font-bold text-2xl text-gray-600 underline ">Détails du marché</h1>
             </div>
             <form  className="" onSubmit={handleSubmit(onSubmit)}>
             {isEditing ?

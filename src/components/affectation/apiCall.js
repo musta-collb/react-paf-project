@@ -1,4 +1,7 @@
 import axios from '../../axios.js'
+export const createAffectation= affectaion=>{
+    return axios.post('affectations',affectaion)
+}
 export const fetchAllAffectation = async()=>{
     const res= await axios.get('/affectations');
     if(res.statusText!=='OK') {

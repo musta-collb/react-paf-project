@@ -2,7 +2,8 @@ import LinkButton from "../LinkButton";
 
 const Marche = ({marche}) => {
     return ( 
-        <div className="flex justify-between overflow-x-auto items-center mx-2 bg-white rounded shadow px-2">
+        <div className="flex px-[1em]">
+        <div className="flex justify-between w-full overflow-x-auto items-center mx-2 bg-white rounded shadow px-2">
             <div className="flex">
                 <span className="text-gray-600 font-semibold text-sm p-1">Marché N°:</span>
                 <div className=" p-1">{marche.id}</div>
@@ -21,6 +22,7 @@ const Marche = ({marche}) => {
             </div>
             <LinkButton settings={{color:"bg-gray-600", text:"plus ...", to:"../marches/"+marche.id}}/>
         </div>
+    </div>
      );
 }
  

@@ -17,32 +17,32 @@ const TableauDeBordAcquisition = () => {
     return ( 
         <div className="p-[2em] w-full h-screen bg-gray-100">
             <div className="grid grid-cols-3 gap-4">
-                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
-                    <div className="text-xl font-bold px-4">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg ">
+                    <div className="text-xl font-bold px-4 rounded-t-lg bg-gray-300 shadow p-2">
                         Appels d'offres
                     </div>
                     <div className="text-5xl p-4">
                         {appelsoffres.length}
                     </div>
                 </div>
-                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
-                    <div className="text-xl font-bold px-4">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg ">
+                    <div className="text-xl font-bold px-4 rounded-t-lg bg-gray-300 shadow p-2">
                         Offres
                     </div>
                     <div className="text-5xl p-4">
                     {offres.length}
                     </div>
                 </div>
-                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
-                    <div className="text-xl font-bold px-4 ">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg ">
+                    <div className="text-xl font-bold px-4 rounded-t-lg bg-gray-300 shadow p-2">
                         Marché
                     </div>
                     <div className="text-5xl p-4">
                     {marches.length}
                     </div>
                 </div>
-                <div className="flex flex-col bg-white shadow-lg rounded-lg p-2">
-                    <div className="text-xl font-bold px-4">
+                <div className="flex flex-col bg-white shadow-lg rounded-lg ">
+                    <div className="text-xl font-bold px-4 rounded-t-lg bg-gray-300 shadow p-2">
                         Fournisseurs
                     </div>
                     <div className="text-5xl p-4">

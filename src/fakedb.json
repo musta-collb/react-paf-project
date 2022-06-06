@@ -7,7 +7,7 @@
       "email": "email",
       "telephone": "telephone",
       "pays": "Maroc",
-      "secteur": "ppn",
+      "secteur": "Produit de première necésssité",
       "nb_annee_exp": 10,
       "code_postale": 80000
     },
@@ -49,7 +49,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -68,7 +68,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",
@@ -85,7 +85,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -104,7 +104,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",
@@ -121,7 +121,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -140,7 +140,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",
@@ -157,7 +157,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -176,7 +176,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",
@@ -193,7 +193,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -212,7 +212,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",
@@ -229,7 +229,7 @@
     {
       "id": 1,
       "date": "12-23-2017",
-      "date_livraiseon": "12-02-2022",
+      "date_livraison": "12-02-2022",
       "fournisseur": {
         "raison_sociale": "Marjane",
         "adresse": "Agadir",
@@ -248,7 +248,7 @@
         {
           "id": 1,
           "quantite": 100,
-          "prix unitaire": 2000,
+          "prix_unitaire": 2000,
           "article_generique": {
             "id": 1,
             "designation": "chaise",

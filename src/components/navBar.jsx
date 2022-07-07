@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const { links } = props;
-  console.log("in navbar",links)
+  console.log("in navbar", links)
   const style = {
     zIndex: 10000,
   };
@@ -13,7 +13,7 @@ const NavBar = (props) => {
         <div className="flex items-center justify-around h-16 container">
           <div className="flex items-center justify-between w-full">
             <div className="flex-shrink-0">
-              <h1 className="text-white font-bold font-lora">ALINA BUISNESS</h1>
+              <h1 className="text-white font-bold font-lora">VALA</h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex  space-x-4 float-left">

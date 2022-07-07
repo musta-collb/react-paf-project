@@ -6,16 +6,29 @@ import SubmitButton from "../SubmitButton";
 import { updateAppelOffre, fetchAppelOffre } from "./apiCall";
 import { useEffect } from "react";
 import SimpleButton from "../SimpleButton";
+import {useAlert} from 'react-alert'
 const ModificationAppelOffre = ({idAppel, close, refetch }) => {
     const queryClient=new QueryClient({});
     //data fetching
     const{ data,isLoading, isError, error}=useQuery('detail_appel_offre_for_update', ()=>fetchAppelOffre(idAppel));
+    //alert
+    const alert=useAlert();
     //mutation
     const mutation=useMutation(updateAppelOffre,{
         onSuccess: data => {
             const queryClient=new QueryClient({});
             queryClient.setQueryData(['appelsoffres', { id: idAppel }], data)
             refetch();
+            alert.success("Succès de la modification", {
+                timeout: 2000, 
+                onOpen: () => {
+                console.log('hey')
+                }, 
+                onClose: () => {
+                console.log('closed')
+                } 
+            })
+    
         }
     })
     //Form shits
@@ -28,7 +41,7 @@ const ModificationAppelOffre = ({idAppel, close, refetch }) => {
     const{errors}=formState;
     
     const onSubmit=async (form_data)=>{
-        await mutation.mutate(form_data);
+        await mutation.mutate(form_data);  
         close();
     }
 

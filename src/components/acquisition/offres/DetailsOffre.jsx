@@ -8,9 +8,10 @@ import { useForm, useFieldArray } from "react-hook-form";
 import { useState, useEffect } from "react";
 import SimpleButton from "../SimpleButton";
 import SubmitButton from "../SubmitButton";
+import {useAlert} from "react-alert";
 
 const DetailsOffre = () => {
-    
+    const alert=useAlert();
     //route related stuff
     const { idOffre } = useParams();
     const { id } = useParams();
@@ -25,6 +26,16 @@ const DetailsOffre = () => {
             const queryClient=new QueryClient({});
             queryClient.setQueryData(['offres', { id: idOffre }], data)
             refetch();
+            alert.success("Succès de la modification", {
+                timeout: 2000, 
+                onOpen: () => {
+                console.log('hey')
+                }, 
+                onClose: () => {
+                console.log('closed')
+                } 
+            })
+    
         }
     })
     //Form shits

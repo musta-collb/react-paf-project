@@ -3,8 +3,10 @@ import { useMutation } from 'react-query';
 import { createOffre } from './apiCalls';
 import  SubmitButton  from '../SubmitButton';
 import SimpleButton from '../SimpleButton';
+import { useAlert } from 'react-alert';
 const CreationOffre = () => {
-
+    //alert
+    const alert=useAlert();
     //mutation
     const mutation=useMutation(createOffre)
     //Form shits
@@ -19,7 +21,16 @@ const CreationOffre = () => {
     const{errors}=formState;
     const onSubmit=async (data)=>{
         await mutation.mutate(data);
-        console.log(data)
+        alert.success("Votre offre a été enregistré", {
+            timeout: 2000, 
+            onOpen: () => {
+            console.log('hey')
+            }, 
+            onClose: () => {
+            console.log('closed')
+            } 
+        })
+  
     }
     return ( 
         <div className="w-full flex flex-col overflow-y-auto px-[2cm] space-y-2 pb-[1em] bg-gray-100">

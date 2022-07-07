@@ -3,7 +3,10 @@ import { useMutation } from "react-query";
 import SimpleButton from "../SimpleButton";
 import SubmitButton from "../SubmitButton";
 import { createAppelOffre } from "./apiCall";
+import { useAlert } from "react-alert";
 export default function CreationAppelOffre() {
+    //alert
+    const alert = useAlert()
     //mutation
     const mutation=useMutation(createAppelOffre)
     //Form shits
@@ -18,6 +21,16 @@ export default function CreationAppelOffre() {
     const{errors}=formState;
     const onSubmit=async (data)=>{
         await mutation.mutate(data);
+         alert.success("Votre appel doffre a été créé avec succés", {
+            timeout: 2000, 
+            onOpen: () => {
+            console.log('hey')
+            }, 
+            onClose: () => {
+            console.log('closed')
+            } 
+        })
+  
     }
     return (
     <div className="flex w-full h-screen">
